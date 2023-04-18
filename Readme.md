@@ -1,7 +1,7 @@
 # Личный проект «Кэт энерджи»
 
 * Студент: [Ева Микляева](https://up.htmlacademy.ru/adaptive/28/user/2282555).
-* Наставник: [Михаил Кислый] (https://htmlacademy.ru/profile/smart-grizzly).
+* Наставник: [Сергей Артемов](https://htmlacademy.ru/profile/firefoxic).
 
 ---
 
