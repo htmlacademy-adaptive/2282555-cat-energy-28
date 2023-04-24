@@ -9,6 +9,11 @@
 		<div class="hero__slogan">
 			<p>Занялся собой? Займись котом!</p>
 		</div>
+		<picture>
+			<source media="(min-width: 1150px)" srcset="img/hero-product-desktop@1x.png 1x, img/hero-product-desktop@2x.png 2x" width="552" height="499">
+			<source media="(min-width: 768px)" srcset="img/hero-product-tablet@1x.png 1x, img/hero-product-tablet@2x.png 2x" width="709" height="609">
+			<img class="hero__product" src="img/hero-product-mobile@1x.png" srcset="img/hero-product-mobile@2x.png 2x" width="280" height="270" alt="Внешний вид упаковки корма.">
+		</picture>
 		<img class="hero__product-packaging" src="https://placekitten.com/480/360" width="50" height="50" alt="Внешний вид упаковки корма.">
 		<a class="hero__button" href="form.html">подобрать программу</a>
 	</div>
@@ -62,10 +67,16 @@
 		<div class="example__slider slider">
 			<ul class="slider__list">
 				<li class="slider__item">
-					<img class="slider__image" src="https://placekitten.com/480/360" width="70" height="70" alt="Кот Борис до похудения.">
+					<picture>
+						<source media="(min-width: 768px)" srcset="img/slider-before-tablet-desktop@1x.png 1x, img/slider-before-tablet-desktop@2x.png 2x" width="560" height="512">
+						<img class="slider__image" src="img/slider-before-mobile@1x.png" srcset="img/slider-before-mobile@2x.png 2x" width="280" height="256" alt="Кот Борис до похудения.">
+					</picture>
 				</li>
 				<li class="slider__item">
-					<img class="slider__image" src="https://placekitten.com/480/360" width="70" height="70" alt="Кот Борис после похудения.">
+					<picture>
+						<source media="(min-width: 768px)" srcset="img/slider-after-tablet-desktop@1x.png 1x, img/slider-after-tablet-desktop@2x.png 2x" width="560" height="512">
+						<img class="slider__image" src="img/slider-after-mobile@1x.png" srcset="img/slider-after-mobile@2x.png 2x" width="280" height="256" alt="Кот Борис после похудения.">
+					</picture>
 				</li>
 			</ul>
 			<button class="slider__toggle" type="button"></button>
