@@ -43,11 +43,6 @@
 			"ext": "jpg",
 			"maxdppx": 2,
 			"sizes": [{
-					"viewport": "desktop",
-					"width": 560,
-					"height": 512
-				},
-				{
 					"viewport": "tablet",
 					"width": 560,
 					"height": 512
@@ -63,11 +58,6 @@
 			"ext": "png",
 			"maxdppx": 2,
 			"sizes": [{
-					"viewport": "desktop",
-					"width": 560,
-					"height": 512
-				},
-				{
 					"viewport": "tablet",
 					"width": 560,
 					"height": 512
@@ -83,11 +73,6 @@
 			"ext": "png",
 			"maxdppx": 2,
 			"sizes": [{
-					"viewport": "desktop",
-					"width": 560,
-					"height": 512
-				},
-				{
 					"viewport": "tablet",
 					"width": 560,
 					"height": 512
@@ -103,11 +88,6 @@
 			"ext": "png",
 			"maxdppx": 2,
 			"sizes": [{
-					"viewport": "desktop",
-					"width": 161,
-					"height": 172
-				},
-				{
 					"viewport": "tablet",
 					"width": 161,
 					"height": 172
@@ -143,11 +123,6 @@
 			"ext": "png",
 			"maxdppx": 2,
 			"sizes": [{
-					"viewport": "desktop",
-					"width": 163,
-					"height": 174
-				},
-				{
 					"viewport": "tablet",
 					"width": 163,
 					"height": 174
@@ -183,11 +158,6 @@
 			"ext": "png",
 			"maxdppx": 2,
 			"sizes": [{
-					"viewport": "desktop",
-					"width": 161,
-					"height": 172
-				},
-				{
 					"viewport": "tablet",
 					"width": 161,
 					"height": 172
@@ -223,11 +193,6 @@
 			"ext": "png",
 			"maxdppx": 2,
 			"sizes": [{
-					"viewport": "desktop",
-					"width": 161,
-					"height": 172
-				},
-				{
 					"viewport": "tablet",
 					"width": 163,
 					"height": 174

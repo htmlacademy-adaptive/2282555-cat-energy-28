@@ -11,14 +11,14 @@
 		background:
 			linear-gradient(
 				rgb(104 183 56/ 0.85),
-				rgb(104 183 56/ 0.85),
+				rgb(104 183 56/ 0.85)
 			),
 			var(--bg-image) no-repeat center/cover,
 			linear-gradient(
 				to right,
 				#505155,
-				#444347,
-			),;
+				#444347
+			);
 	}
 
 	@include bg-image("promo-background");
