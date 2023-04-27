@@ -99,10 +99,7 @@
 			</li>
 			<li class="catalog__item product-card">
 				<h3 class="product-card__title">Cat Energy SLIM 500 г</h3>
-				<picture>
-					<source media="(min-width: 768px)" srcset="img/products/slim-rice500-tablet-desktop@1x.png 1x, img/products/slim-rice500-tablet-desktop@2x.png 2x" width="163" height="174">
-					<img class="product-card__image" src="img/products/slim-rice500-mobile@1x.png" srcset="img/products/slim-rice500-mobile@2x.png 2x" width="72" height="84" alt="Упаковка корма Cat Energy  в фиолетовых оттенках со вкусом риса.">
-				</picture>
+				{% include "./templates/picture.twig" with {name: "products/slim-rice500", class: "product-card__image", alt: "Упаковка корма Cat Energy в фиолетовых оттенках со вкусом риса."} %}
 				<div class="product-card__characteristic-wrapper">
 					<dl class="product-card__characteristic characteristic-list">
 						<dt class="characteristic-list__title">Масса</dt>

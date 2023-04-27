@@ -5,14 +5,9 @@
 			<p>приглашаем к сотрудничеству дилеров!</p>
 		</div>
 		<address class="location__address">ул. Большая Конюшенная, д. 19/8 Санкт-Петербург</address>
-		<picture>
-			<source media="(min-width:1150px)" srcset="./img/map-desktop@1x.png 1x, ./img/map-desktop@2x.png 2x" width="1440" height="400">
-			<source media="(min-width:768px)" srcset="./img/map-tablet@1x.png 1x, ./img/map-tablet@2x.png 2x" width="320" height="362">
-			<img class="location__interactive-map" src="./img/map-mobile@1x.png" srcset="./img/map-mobile@2x.png 2x" width="768" height="400" alt="Интерактивная карта с адресом магазина.">
-		</picture>
+		{% include "picture.twig" with {name: "map", class: "location__interactive-map", alt: "Интерактивная карта с адресом магазина."} %}
 	</section>
 	<section class="contacts">
-
 		<h2 class="visually-hidden">Контакты</h2>
 		<a class="logo" href="../index.html">
 			<img class="logo__text" src="https://placekitten.com/480/360" width="20" height="20" alt="Логотип Cat Energy.">
