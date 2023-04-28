@@ -18,20 +18,24 @@ jobs:
 
       - name: Checkout
         uses: actions/checkout@v3
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v3
         with:
-          persist-credentials: false
+          node-version-file: 'package.json'
 
-      - name: Setup Volta
-        uses: volta-cli/action@v4
-
-      - name: Install Node.js
-        run: volta install node
+      - name: Restore cache
+        uses: actions/cache@v3
+        with:
+          path: /home/runner/.local/share/pnpm/store/v3
+          key: cache-pnpm-${{ hashFiles('./pnpn-lock.yaml') }}
+          restore-keys: cache-pnpm-
 
       - name: Install pnpm
-        run: volta install pnpm
+        run: corepack enable; corepack prepare pnpm@latest --activate
 
       - name: Install dependencies
-        run: pnpm i
+        run: pnpm i --ignore-scripts
 
       - name: Build project
         run: npm run build
