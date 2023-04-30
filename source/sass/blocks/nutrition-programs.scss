@@ -1,12 +1,11 @@
 
 .nutrition-programs {
-	display: flex;
-	flex-direction: column;
-	text-align: center;
+	display: grid;
 	gap: 20px;
+	text-align: center;
 
 	@media #{$desktop-only} {
-		flex-direction: row;
+		grid-template-columns: repeat(2, 1fr);
 		gap: 80px;
 	}
 }
@@ -30,8 +29,7 @@
 	position: relative;
 }
 
-.nutrition-programs__slim,
-.nutrition-programs__pro {
+.nutrition-programs__item {
 	position: relative;
 	display: inherit;
 	flex-direction: column;
