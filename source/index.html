@@ -12,19 +12,21 @@
 		{% include "./templates/picture.twig" with {name: "hero-product", class: "hero__product", alt: "Внешний вид упаковки корма."} %}
 		<a class="hero__button" href="form.html">подобрать программу</a>
 	</div>
-	<section class="nutrition-programs">
-		<h2 class="visually-hidden">Программы питания</h2>
-		<div class="nutrition-programs__slim">
-			<h3 class="nutrition-programs__title">похудение</h3>
-			Ваш кот весит больше собаки и почти утратил способность лазить по деревьям? Пора на диету! Cat Energy Slim поможет вашему питомцу сбросить лишний вес.
-			<a class="nutrition-programs__link" href="catalog.html">каталог slim</a>
-		</div>
-		<div class="nutrition-programs__weight">
-			<h3 class="nutrition-programs__title">Набор массы</h3>
-			Заработать авторитет среди дворовых котов и даже собак? Серия Cat Energy Pro поможет вашему коту нарастить необходимые мышцы!
-			<a class="nutrition-programs__link" href="catalog.html">каталог pro</a>
-		</div>
-	</section>
+	<div class="leveler">
+		<section class="nutrition-programs">
+			<h2 class="visually-hidden">Программы питания</h2>
+			<div class="nutrition-programs__slim">
+				<h3 class="nutrition-programs__title">похудение</h3>
+				Ваш кот весит больше собаки и почти утратил способность лазить по деревьям? Пора на диету! Cat Energy Slim поможет вашему питомцу сбросить лишний вес.
+				<a class="nutrition-programs__link" href="catalog.html">каталог slim</a>
+			</div>
+			<div class="nutrition-programs__pro">
+				<h3 class="nutrition-programs__title">Набор массы</h3>
+				Заработать авторитет среди дворовых котов и даже собак? Серия Cat Energy Pro поможет вашему коту нарастить необходимые мышцы!
+				<a class="nutrition-programs__link" href="catalog.html">каталог pro</a>
+			</div>
+		</section>
+	</div>
 	<section class="features">
 		<h2 class="features__title">Как это работает</h2>
 		<ol class="features__list">
