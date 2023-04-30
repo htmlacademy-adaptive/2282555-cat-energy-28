@@ -1,0 +1,28 @@
+.features__title {
+	margin-bottom: 30px;
+}
+
+.features__list {
+	display: grid;
+	gap: 20px;
+
+	@media #{$tablet-only} {
+		grid-template-columns: repeat(2, 1fr);
+		gap: 37px;
+		justify-content: space-around;
+	}
+
+	@media #{$desktop-only} {
+		grid-template-columns: repeat(4, 1fr);
+		gap: 37px;
+		justify-content: space-around;
+	}
+}
+
+.features__item {
+	@media #{$mobile-only} {
+		&::marker {
+			color: transparent;
+		}
+	}
+}
