@@ -4,11 +4,10 @@
 	"private": true,
 	"type": "module",
 	"scripts": {
-		"editorconfig": "editorconfig-checker",
+		"editorconfig": "ec",
 		"stylelint": "stylelint \"source/sass/**/*.scss\"",
-		"w3c": "gulp processMarkup validateMarkup --series --silent",
-		"bemlint": "gulp processMarkup lintBem --series --silent",
-		"lint": "npm run editorconfig && npm run stylelint && npm run w3c && npm run bemlint",
+		"htmllint": "gulp processMarkup lintBem --series --silent && html-validator \"build/*.html\" --quiet",
+		"lint": " npm run editorconfig && npm run stylelint && npm run htmllint",
 		"start": "gulp runDev",
 		"build": "gulp buildProd",
 		"preview": "gulp buildProd startServer --series"
@@ -30,7 +29,6 @@
 		"gulp-svgmin": "^4.1.0",
 		"gulp-terser": "^2.1.0",
 		"gulp-twig": "^1.2.0",
-		"gulp-w3c-html-validator": "^5.2.0",
 		"postcss": "^8.4.23",
 		"postcss-csso": "^6.0.1",
 		"postcss-scss": "^4.0.6",
@@ -38,7 +36,8 @@
 		"pre-commit": "^1.2.2",
 		"sass": "^1.62.1",
 		"stylelint": "^15.6.0",
-		"stylelint-config-firefoxic": "^1.2.1"
+		"stylelint-config-firefoxic": "^1.2.1",
+		"w3c-html-validator": "^1.3.3"
 	},
 	"browserslist": [
 		"last 2 versions",
