@@ -3,23 +3,25 @@
 }
 
 .features__list {
+	--column-count: 1;
 	display: grid;
 	gap: 20px;
+	grid-template-columns: repeat(var(--column-count, 1), 1fr);
 
-	@media #{$tablet-only} {
-		grid-template-columns: repeat(2, 1fr);
+	@media #{$not-mobile} {
+		--column-count: 2;
 		gap: 37px;
 		justify-content: space-around;
 	}
 
 	@media #{$desktop-only} {
-		grid-template-columns: repeat(4, 1fr);
-		gap: 37px;
-		justify-content: space-around;
+		--column-count: 4;
 	}
 }
 
 .features__item {
+	position: relative;
+
 	@media #{$mobile-only} {
 		&::marker {
 			color: transparent;

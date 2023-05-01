@@ -1,0 +1,36 @@
+.catalog__title {
+	margin-bottom: 49px;
+
+	@media #{$tablet-only} {
+		margin-bottom: 82px;
+	}
+
+	@media #{$desktop-only} {
+		margin-bottom: 84px;
+	}
+}
+
+.catalog__list {
+	--column-count: 1;
+	display: grid;
+	gap: 19px;
+	grid-template-columns: repeat(var(--column-count, 1), 1fr);
+	justify-items: center;
+
+
+	@media #{$not-mobile} {
+		--column-count: 2;
+		gap: 60px;
+	}
+
+	@media #{$desktop-only} {
+		--column-count: 4;
+		gap: 80px;
+	}
+}
+
+.catalog__item {
+	&::marker {
+		color: transparent;
+	}
+}
