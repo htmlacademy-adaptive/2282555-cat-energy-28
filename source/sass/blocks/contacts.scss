@@ -1,0 +1,15 @@
+.contacts {
+	display: grid;
+	gap: 20px;
+	grid-template-columns: repeat(var(--column-count, 1), 1fr);
+	justify-items: center;
+	align-items: center;
+	padding-top: 40px;
+	padding-bottom: 40px;
+
+	@media #{$not-mobile} {
+		--column-count: 3;
+		gap: 37px;
+		justify-content: space-around;
+	}
+}

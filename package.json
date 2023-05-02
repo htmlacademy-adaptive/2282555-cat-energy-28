@@ -6,7 +6,7 @@
 	"scripts": {
 		"editorconfig": "ec",
 		"stylelint": "stylelint \"source/sass/**/*.scss\"",
-		"htmllint": "gulp processMarkup lintBem --series --silent && html-validator \"build/*.html\" --quiet",
+		"htmllint": "gulp processMarkup lintBem --series --silent && html-validator build/*.html --quiet",
 		"lint": " npm run editorconfig && npm run stylelint && npm run htmllint",
 		"start": "gulp runDev",
 		"build": "gulp buildProd",

@@ -1,0 +1,12 @@
+
+
+.copyright__link {
+	&::after {
+		display: block;
+		content: "";
+		width: 37px;
+		height: 24px;
+		mask: url("../../icons/stack.svg#htmacademy") no-repeat center / 100%;
+		background: #000000;
+	}
+}
