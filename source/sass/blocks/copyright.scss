@@ -1,12 +1,23 @@
 
+.copyright {
+	display: flex;
+	flex-direction: row;
+	justify-items: flex-start;
+}
 
 .copyright__link {
+	display: flex;
+	color: #444444;
+	text-decoration: none;
+	font-size: 16px;
+	line-height: 19px;
+
 	&::after {
 		display: block;
 		content: "";
 		width: 37px;
 		height: 24px;
-		mask: url("../../icons/stack.svg#htmacademy") no-repeat center / 100%;
-		background: #000000;
+		mask: url("../../icons/stack.svg#htmlacademy") no-repeat center / 100%;
+		background: #666666;
 	}
 }

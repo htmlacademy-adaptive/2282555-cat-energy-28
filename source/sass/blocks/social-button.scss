@@ -1,0 +1,44 @@
+.social-button {
+	display: block;
+	padding: 10px;
+
+	&--icon_vkontakte {
+		--icon: url("../../icons/stack.svg#social_vkontakte");
+	}
+
+	&--icon_youtube {
+		--icon: url("../../icons/stack.svg#social_youtube");
+	}
+
+	&--icon_telegram {
+		--icon: url("../../icons/stack.svg#social_telegram");
+	}
+
+	&::before {
+		content: "";
+		display: block;
+		width: 27px;
+		height: 17px;
+		background: #666666;
+		mask: var(--icon) no-repeat center / cover;
+	}
+
+	&:hover {
+		&::before {
+			background-color: var(--color, #68b738);
+		}
+	}
+
+	&:focus-visible {
+		&::before {
+			background-color: var(--color);
+		}
+	}
+
+	&:active {
+		&::before {
+			background-color: var(--color);
+			opacity: 0.5;
+		}
+	}
+}

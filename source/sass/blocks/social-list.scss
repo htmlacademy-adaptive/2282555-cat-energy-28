@@ -1,4 +1,13 @@
 .social-list {
 	display: flex;
 	flex-wrap: wrap;
+	margin: 0;
+	padding: 0;
+	gap: 4px;
+}
+
+.social-list__item {
+	&::marker {
+		color: transparent;
+	}
 }
