@@ -1,0 +1,10 @@
+.logo__footer {
+	&:hover {
+		color: hsl(0 0% 24% / 1);
+	}
+
+	&:focus,
+	&:active {
+		color: hsl(0 0% 24% / 0.3);
+	}
+}

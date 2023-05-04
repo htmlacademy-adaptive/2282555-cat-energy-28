@@ -1,6 +1,7 @@
 :root {
 	--main-color: #444444;
-	--accent-color: #68b738;
+	--accent-hsl: 97 53% 47%;
+	--accent-color: hsl(var(--accent-hsl));
 }
 $tablet-width: 768px;
 $desktop-width: 1150px;

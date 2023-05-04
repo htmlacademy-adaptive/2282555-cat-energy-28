@@ -7,6 +7,8 @@
 	display: grid;
 	gap: 20px;
 	grid-template-columns: repeat(var(--column-count, 1), 1fr);
+	padding: 0;
+	margin: 0;
 
 	@media #{$not-mobile} {
 		--column-count: 2;
@@ -20,11 +22,46 @@
 }
 
 .features__item {
+	//display: flex;
+	//flex-direction: row-reverse;
+	//justify-items: flex-start;
+	//gap: 20px;
 	position: relative;
+	padding-left: 80px;
 
 	@media #{$mobile-only} {
 		&::marker {
 			color: transparent;
 		}
+	}
+
+	&--icon_leaf {
+		--icon: url("../../icons/stack.svg#features_leaf");
+	}
+
+	&--icon_tub {
+		--icon: url("../../icons/stack.svg#features_tub");
+	}
+
+	&--icon_eat {
+		--icon: url("../../icons/stack.svg#features_eat");
+	}
+
+	&--icon_alarm {
+		--icon: url("../../icons/stack.svg#features_alarm");
+	}
+
+	&::after {
+		position: absolute;
+		left: 0;
+		top: 0;
+		content: "";
+		width: 60px;
+		height: 60px;
+		background-color: #68b738;
+		background-image: var(--icon);
+		background-repeat: no-repeat;
+		background-position: center;
+		background-size: 40px;
 	}
 }
