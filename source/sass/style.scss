@@ -7,14 +7,18 @@
 @import "./blocks/page.scss";
 @import "./blocks/heading.scss";
 @import "./blocks/logo.scss";
+@import "./blocks/button.scss";
 //index
 @import "./blocks/hero.scss";
 @import "./blocks/features.scss";
 @import "./blocks/nutrition-programs.scss";
 //catalog
-@import "./blocks/promo.scss";
+@import "./blocks/catalog-container.scss";
 @import "./blocks/catalog.scss";
 @import "./blocks/product-card.scss";
+@import "./blocks/additional-product.scss";
+@import "./blocks/additional-product-card.scss";
+@import "./blocks/promo.scss";
 //footer
 @import "./blocks/contacts.scss";
 @import "./blocks/social-list.scss";

@@ -1,0 +1,13 @@
+.button {
+
+	color: #ffffff;
+	text-decoration: none;
+	text-transform: uppercase;
+	display: flex;
+	justify-content: center;
+	padding: 10px;
+
+	&--basic {
+		background-color: var(--accent-color);
+	}
+}
