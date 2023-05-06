@@ -1,0 +1,16 @@
+.slider {
+	width: 280px;
+	height: 256px;
+	justify-content: center;
+}
+
+
+.slider__item {
+	&::marker {
+		color: transparent;
+	}
+}
+
+.slider-image {
+	display: block;
+}
