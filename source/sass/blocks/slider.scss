@@ -1,9 +1,11 @@
-.slider {
-	width: 280px;
-	height: 256px;
-	justify-content: center;
+.slider__list {
+	position: relative;
 }
 
+.slider__item--after {
+	position: absolute;
+	top: 0;
+}
 
 .slider__item {
 	&::marker {
