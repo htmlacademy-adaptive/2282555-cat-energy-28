@@ -1,0 +1,95 @@
+.navigation {
+	display: flex;
+
+	@media #{$mobile-only} {
+		justify-content: center;
+	}
+
+	@media #{$not-mobile} {
+		margin-left: auto;
+	}
+}
+
+.navigation__wrapper {
+	align-self: center;
+}
+
+.navigation--closed .navigation__wrapper {
+	@media #{$mobile-only} {
+		display: none;
+	}
+}
+
+.navigation__list {
+	margin: 0;
+	padding: 0;
+	display: flex;
+
+	@media #{$mobile-only} {
+		flex-direction: column;
+		visibility: visible;
+		position: static;
+		gap: 46px;
+		padding: 22px 0 24px;
+		text-align: center;
+	}
+}
+
+
+.navigation__item {
+	&::marker {
+		color: transparent;
+	}
+}
+
+.navigation__link {
+	font-family: var(--accent-color);
+	color: #000000;
+	text-decoration: none;
+	text-transform: uppercase;
+	padding: 10px;
+	font-size: 18px;
+	line-height: 24px;
+	font-style: normal;
+	font-weight: 400;
+
+	@media #{$mobile-only} {
+		font-size: 20px;
+		line-height: 20px;
+		font-weight: 500;
+	}
+
+	@media #{$desktop-only} {
+		color: #ffffff;
+	}
+}
+
+.navigation__toggle {
+	width: 24px;
+	height: 24px;
+	border: none;
+	position: absolute;
+	top: 20px;
+	right: 0;
+	z-index: 2;
+	cursor: pointer;
+	background-color: transparent;
+
+	@media #{$not-mobile} {
+		display: none;
+	}
+}
+
+.navigation--closed .navigation__toggle {
+	background-image: url("../../icons/stack.svg#burger-menu");
+	background-position: center;
+}
+
+.navigation--opened .navigation__toggle {
+	background-image: url("../../icons/stack.svg#cross");
+	background-position: center;
+}
+
+.navigation--nojs .navigation__toggle {
+	display: none;
+}

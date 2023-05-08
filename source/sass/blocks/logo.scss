@@ -1,3 +1,15 @@
+.logo__header {
+	min-height: 65px;
+	display: flex;
+	align-items: center;
+}
+
+.logo__text--header {
+	@media #{$mobile-only} {
+		margin: 0 auto;
+	}
+}
+
 .logo__footer {
 	&:hover {
 		color: hsl(0 0% 24% / 1);

@@ -1,28 +1,33 @@
 <header class="page__header">
-	<a class="logo" href="./index.html">
+	<div class="page__leveler header-container">
+	<a class="logo logo__header" href="./index.html">
+		<div class="logo__wrapper">
 		<picture>
 			<source media="(min-width:1150px)" srcset="./img/logo.svg#logo-desktop" width="70" height="60">
 			<source media="(min-width:768px)" srcset="./img/logo.svg#logo-tablet" width="60" height="50">
 			<img class="logo__image" src="./img/logo.svg#logo" width="34" height="38" alt="Фирменный знак.">
 		</picture>
-		<img class="logo__text" src="./img/logo.svg#brand-name-header" width="118" height="22" alt="Логотип Cat Energy.">
+	</div>
+		<img class="logo__text--header" src="./img/logo.svg#brand-name-header" width="118" height="22" alt="Логотип Cat Energy.">
 	</a>
-	<nav class="navigation">
+	<nav class="navigation navigation--opened navigation--closed navigation--nojs">
 		<button class="navigation__toggle" type="button">
 			<span class="visually-hidden">Открыть меню</span>
 		</button>
 		<div class="navigation__wrapper">
 			<ul class="navigation__list">
 				<li class="navigation__item">
-					<a href="./index.html" aria-current="page">главная</a>
+					<a class="navigation__link" href="./index.html" aria-current="page">главная</a>
 				</li>
 				<li class="navigation__item">
-					<a href="./catalog.html">каталог продукции</a>
+					<a class="navigation__link" href="./catalog.html">каталог продукции</a>
 				</li>
 				<li class="navigation__item">
-					<a href="./form.html">подбор программы</a>
+					<a class="navigation__link" href="./form.html">подбор программы</a>
 				</li>
 			</ul>
 		</div>
 	</nav>
+</div>
+<script src="./js/navigation-script.js" defer></script>
 </header>
