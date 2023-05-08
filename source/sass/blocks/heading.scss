@@ -7,6 +7,8 @@
 		font-size: 36px;
 		line-height: 40px;
 		color: #000000;
+		font-style: normal;
+		font-weight: 400;
 
 		@media #{$not-mobile} {
 			font-size: 60px;
