@@ -6,19 +6,19 @@
 <main class="main-container">
 	<section class="hero">
 		<div class="page__leveler hero__container">
-		<div class="hero__text">
-		<h1 class="hero__title heading heading--lvl_1">Функциональное<br>питание для котов</h1>
-		<div class="hero__slogan">
-			<p>Занялся собой? Займись котом!</p>
+			<div class="hero__text">
+				<h1 class="hero__title heading heading--lvl_1">Функциональное<br>питание для котов</h1>
+				<div class="hero__slogan">
+					<p>Занялся собой? Займись котом!</p>
+				</div>
+				<a class="hero__button button button--basic" href="form.html">подобрать программу</a>
+			</div>
+			<div class="hero__product-wrapper">
+				{% include "./templates/picture.twig" with {name: "hero-product", class: "hero__product", alt: "Внешний вид упаковки корма."} %}
+			</div>
 		</div>
-		<a class="hero__button button button--basic" href="form.html">подобрать программу</a>
-	</div>
-	<div class="hero__product-wrapper">
-		{% include "./templates/picture.twig" with {name: "hero-product", class: "hero__product", alt: "Внешний вид упаковки корма."} %}
-	</div>
-	</div>
 	</section>
-		<section class="nutrition-programs page__leveler">
+	<section class="nutrition-programs page__leveler">
 		<h2 class="visually-hidden">Программы питания</h2>
 		<div class="nutrition-programs__item">
 			<h3 class="nutrition-programs__title">похудение</h3>
@@ -50,23 +50,23 @@
 	</section>
 	<section class="example page__leveler">
 		<div class="example__text">
-		<h2 class="example__title heading heading--lvl_1 ">Живой пример</h2>
-		<p>Борис сбросил 5 кг за 2 месяца, просто заменив свой обычный корм на Cat Energy Slim. Отличный результат без изнуряющих тренировок! При этом он не менял своих привычек и по-прежнему спит по 16 часов в день.</p>
-		<dl class="example__stats">
-			<div class="example__wrapper example__wrapper--block">
-				<dt class="example__name" >снижение веса</dt>
-				<dd class="example__value example__value--block">5 КГ</dd>
-			</div>
-			<div class="example__wrapper example__wrapper--block">
-				<dt class="example__name">затрачено времени</dt>
-				<dd class="example__value example__value--block">60 ДНЕЙ</dd>
-			</div>
-			<div class="example__wrapper example__wrapper--line">
-				<dt>Затраты на питание:</dt>
-				<dd class="example__value"> 15 000 РУБ.</dd>
-			</div>
-		</dl>
-	</div>
+			<h2 class="example__title heading heading--lvl_1 ">Живой пример</h2>
+			<p>Борис сбросил 5 кг за 2 месяца, просто заменив свой обычный корм на Cat Energy Slim. Отличный результат без изнуряющих тренировок! При этом он не менял своих привычек и по-прежнему спит по 16 часов в день.</p>
+			<dl class="example__stats">
+				<div class="example__wrapper example__wrapper--block">
+					<dt class="example__name">снижение веса</dt>
+					<dd class="example__value example__value--block">5 КГ</dd>
+				</div>
+				<div class="example__wrapper example__wrapper--block">
+					<dt class="example__name">затрачено времени</dt>
+					<dd class="example__value example__value--block">60 ДНЕЙ</dd>
+				</div>
+				<div class="example__wrapper example__wrapper--line">
+					<dt>Затраты на питание:</dt>
+					<dd class="example__value"> 15 000 РУБ.</dd>
+				</div>
+			</dl>
+		</div>
 		<div class="example__slider slider">
 			<ul class="slider__list">
 				<li class="slider__item">
