@@ -27,8 +27,6 @@
 
 	@media #{$mobile-only} {
 		flex-direction: column;
-		visibility: visible;
-		position: static;
 		gap: 46px;
 		padding: 22px 0 24px;
 		text-align: center;
@@ -43,7 +41,7 @@
 }
 
 .navigation__link {
-	font-family: var(--accent-color);
+	font-family: var(--accent-font);
 	color: #000000;
 	text-decoration: none;
 	text-transform: uppercase;
@@ -61,6 +59,7 @@
 
 	@media #{$desktop-only} {
 		color: #ffffff;
+		line-height: 30px;
 	}
 }
 
@@ -74,6 +73,8 @@
 	z-index: 2;
 	cursor: pointer;
 	background-color: transparent;
+	background-image: url("../../icons/stack.svg#burger-menu");
+	background-position: center;
 
 	@media #{$not-mobile} {
 		display: none;
@@ -92,4 +93,9 @@
 
 .navigation--nojs .navigation__toggle {
 	display: none;
+}
+
+.navigation--nojs .navigation__wrapper {
+	visibility: visible;
+	position: static;
 }
