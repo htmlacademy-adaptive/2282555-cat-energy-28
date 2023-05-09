@@ -8,7 +8,8 @@
 		<h1 class="questionnaire__title">Подбор программы</h1>
 		<p>Заполните анкету, и мы подберем программу питания для вашего кота</p>
 		<form class="questionnaire__form form" action="https://echo.htmlacademy.ru/" method="post">
-			<fieldset class="form__info info-form">
+			<div class="form__container">
+			<fieldset class="form__info form__group info-form ">
 				<legend class="visually-hidden">Информация о вашем коте</legend>
 				<label class="info-form__text" for="name-field">Имя:<span aria-hidden="true">*</span></label>
 				<input class="info-form__field" id="name-field" type="text" value="Барсик" placeholder="Имя кота" required>
@@ -34,6 +35,7 @@
 					</li>
 				</ul>
 			</fieldset>
+		</div>
 			<fieldset class="form__contacts contacts-form">
 				<legend class="contacts-form__title">Контактные данные (владельца кота)</legend>
 				<label class="contacts-form__text" for="email-field">E-mail:<span aria-hidden="true">*</span></label>
