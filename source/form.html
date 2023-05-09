@@ -4,11 +4,12 @@
 
 {% block main %}
 <main class="form-container">
-	<section class="questionnaire">
+	<section class="questionnaire page__leveler">
 		<h1 class="questionnaire__title">Подбор программы</h1>
 		<p>Заполните анкету, и мы подберем программу питания для вашего кота</p>
 		<form class="questionnaire__form form" action="https://echo.htmlacademy.ru/" method="post">
 			<div class="form__container">
+<<<<<<< Updated upstream
 				<fieldset class="form__info form__group info-form ">
 					<legend class="visually-hidden">Информация о вашем коте</legend>
 					<label class="info-form__text" for="name-field">Имя:<span aria-hidden="true">*</span></label>
@@ -39,34 +40,76 @@
 			<fieldset class="form__contacts contacts-form">
 				<legend class="contacts-form__title">Контактные данные (владельца кота)</legend>
 				<label class="contacts-form__text" for="email-field">E-mail:<span aria-hidden="true">*</span></label>
+=======
+			<fieldset class="form__info form__group form-info">
+				<legend class="visually-hidden">Информация о вашем коте</legend>
+				<div class="form__wrapper">
+				<label class="form__text" for="name-field">Имя:<span aria-hidden="true">*</span></label>
+				<input class="form__field" id="name-field" type="text" value="Барсик" placeholder="Имя кота" required>
+			</div>
+			<div class="form__wrapper">
+				<label class="form__text" for="weight-field">Вес (кг):<span aria-hidden="true">*</span></label>
+				<input class="form__field" id="weight-field" type="number" value="7" placeholder="Вес кота" required>
+			</div>
+			<div class="form__wrapper">
+				<label class="form__text" for="age-field">Возраст (лет):</label>
+				<input class="form__field" id="age-field" type="number" value="7" placeholder="Возраст кота">
+			</div>
+			</fieldset>
+			<fieldset class="form__diet form-diet">
+				<legend class="visually-hidden">Желаемый результат</legend>
+				<ul class="form-diet__list">
+					<li class="form-diet__item">
+						<input class="form-diet__control" type="radio" id="radio-slim" name="diet" value="slim" checked>
+						<label class="form__text form__text--radio" for="radio-slim">похудение</label>
+					</li>
+					<li class="form-diet__item">
+						<input class="form-diet__control" type="radio" id="radio-pro" name="diet" value="pro">
+						<label class="form__text form__text--radio" for="radio-pro">Набор массы</label>
+					</li>
+					<li class="form-diet__item">
+						<input class="form-diet__control" type="radio" id="radio-uncertainly" name="diet" value="uncertainly">
+						<label class="form__text form__text--radio" for="radio-uncertainly">Не знаю (Нужен ваш совет)</label>
+					</li>
+				</ul>
+			</fieldset>
+		</div>
+			<fieldset class="form__contacts form-contacts">
+				<legend class="form__title heading heading--lvl_2">Контактные данные (владельца кота)</legend>
+				<div class="form__wrapper">
+				<label class="form__text" for="email-field">E-mail:<span aria-hidden="true">*</span></label>
+>>>>>>> Stashed changes
 				<span class="input-icon"></span>
-				<input class="contacts-form__field" id="email-field" type="email" placeholder="Введите e-mail" value="kuklachev@gmail.com" required>
-				<label class="contacts-form__text" for="phone-field">Телефон:<span aria-hidden="true">*</span></label>
+				<input class="form__field" id="email-field" type="email" placeholder="Введите e-mail" value="kuklachev@gmail.com" required>
+				</div>
+				<div class="form__wrapper">
+				<label class="form__text" for="phone-field">Телефон:<span aria-hidden="true">*</span></label>
 				<span class="input-icon"></span>
-				<input class="contacts-form__field" id="phone-field" type="tel" placeholder="Введите телефон" value="8 (960) 900-60-90" required>
+				<input class="form__field" id="phone-field" type="tel" placeholder="Введите телефон" value="8 (960) 900-60-90" required>
+			</div>
 			</fieldset>
 			<div class="form__comment form-comment">
-				<label class="form-comment__title" for="field-comment">Комментарий</label>
-				<textarea class="form-comment__field" name="comment" id="field-comment" placeholder="Расскажите обо всех повадках кота"></textarea>
+				<label class="form__title heading heading--lvl_2" for="field-comment">Комментарий</label>
+				<textarea class="form__field" name="comment" id="field-comment" placeholder="Расскажите обо всех повадках кота"></textarea>
 			</div>
-			<fieldset class="form__additions additions-form">
-				<legend class="additions-form__title">Дополнительно</legend>
-				<ul class="additions-form__list">
-					<li class="additions-form__item">
-						<input class="additions-form__control" type="checkbox" id="additions-sweetener" name="additions" value="sweetener" checked>
-						<label class="additions-form__text" for="additions-sweetener">сахарозаменитель</label>
+			<fieldset class="form__additions form-additions">
+				<legend class="form-additions__title heading heading--lvl_2">Дополнительно</legend>
+				<ul class="form-additions__list">
+					<li class="form-additions__item">
+						<input class="form-additions__control" type="checkbox" id="additions-sweetener" name="additions" value="sweetener" checked>
+						<label class="form__text form__text--checkbox" for="additions-sweetener">сахарозаменитель</label>
 					</li>
-					<li class="additions-form__item">
-						<input class="additions-form__control" id="additions-water" type="checkbox" name="additions" value="water">
-						<label class="additions-form__text" for="additions-water">питьевая вода</label>
+					<li class="form-additions__item">
+						<input class="form-additions__control" id="additions-water" type="checkbox" name="additions" value="water">
+						<label class="form__text form__text--checkbox" for="additions-water">питьевая вода</label>
 					</li>
-					<li class="additions-form__item">
-						<input class="additions-form__control" id="additions-milk" type="checkbox" name="additions" value="milk">
-						<label class="additions-form__text" for="additions-milk">молоко</label>
+					<li class="form-additions__item">
+						<input class="form-additions__control" id="additions-milk" type="checkbox" name="additions" value="milk">
+						<label class="form__text form__text--checkbox" for="additions-milk">молоко</label>
 					</li>
-					<li class="additions-form__item">
-						<input class="additions-form__control" id="additions-vitamins" type="checkbox" name="additions" value="vitamins">
-						<label class="additions-form__text" for="additions-vitamins">витамины</label>
+					<li class="form-additions__item">
+						<input class="form-additions__control" id="additions-vitamins" type="checkbox" name="additions" value="vitamins">
+						<label class="form__text form__text--checkbox" for="additions-vitamins">витамины</label>
 					</li>
 				</ul>
 			</fieldset>

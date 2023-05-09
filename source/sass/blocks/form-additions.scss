@@ -1,0 +1,36 @@
+.form-additions {
+	margin: 23px 0 34px;
+
+	@media #{$tablet-only} {
+		margin: 71px 0 54px;
+	}
+
+	@media #{$desktop-only} {
+		margin: 67px 0 61px;
+	}
+}
+
+.form-additions__list {
+	margin: 0;
+	padding: 0;
+	display: grid;
+	grid-template-columns: 1fr;
+	row-gap: 19px;
+
+	@media #{$tablet-only} {
+		grid-template-columns: repeat(2, 1fr);
+		column-gap: 60px;
+		row-gap: 37px;
+	}
+
+	@media #{$desktop-only} {
+		grid-template-columns: repeat(4, 1fr);
+		column-gap: 80px;
+	}
+}
+
+.form-additions__item {
+	&::marker {
+		color: transparent;
+	}
+}

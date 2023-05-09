@@ -1,9 +1,37 @@
 .form__container {
 	display: grid;
 	grid-template-columns: 1fr;
+	margin: 39px 0 45px;
+
+	@media #{$tablet-only} {
+		margin: 66px 0 71px;
+	}
 
 	@media #{$desktop-only} {
 		grid-template-columns: repeat(2, 1fr);
 		gap: 80px;
+	}
+}
+
+.form__wrapper {
+	display: flex;
+}
+
+.form__text {
+	margin-right: auto;
+	font-size: 16px;
+	text-transform: uppercase;
+
+	@media #{$not-mobile} {
+		font-size: 20px;
+		line-height: 30px;
+	}
+
+	&--radio {
+		color: #222222;
+	}
+
+	&--checkbox {
+		color: #000000;
 	}
 }

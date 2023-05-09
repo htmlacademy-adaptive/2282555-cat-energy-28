@@ -10,7 +10,7 @@
 		min-height: 116px;
 		flex-direction: row-reverse;
 		align-items: center;
-		justify-content: end;
+		justify-content: flex-end;
 	}
 
 	@media #{$desktop-only} {

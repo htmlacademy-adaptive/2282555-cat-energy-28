@@ -41,7 +41,7 @@
 		align-items: center;
 		text-align: center;
 		row-gap: 8px;
-		justify-content: start;
+		justify-content: flex-start;
 	}
 
 	&--line {
@@ -54,7 +54,7 @@
 		@media #{$tablet-only} {
 			flex-direction: column;
 			grid-column-start: 4;
-			align-items: end;
+			align-items: flex-end;
 		}
 
 		@media #{$desktop-only} {

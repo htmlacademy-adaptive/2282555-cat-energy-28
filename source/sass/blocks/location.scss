@@ -52,8 +52,9 @@
 	}
 }
 
-.location__map-wrapper {
+.location__map-container {
 	height: auto;
+	display: grid;
 
 	@media #{$desktop-only} {
 		grid-area: 1 / 1 / 1 / 1;
@@ -65,8 +66,17 @@
 	height: 100%;
 	display: block;
 	border: none;
+	grid-area: 1 / 1 / 1 / 1;
 
 	@media #{$desktop-only} {
 		z-index: -1;
 	}
+}
+
+.location__map-wrapper {
+	grid-area: 1 / 1 / 1 / 1;
+}
+
+.location__map {
+	width: 100vw;
 }

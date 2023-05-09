@@ -1,0 +1,15 @@
+.form-contacts {
+	display: grid;
+	grid-template-columns: 1fr;
+	margin-bottom: 23px;
+
+	@media #{$tablet-only} {
+		margin-bottom: 67px;
+	}
+
+	@media #{$desktop-only} {
+		grid-template-columns: repeat(2, 1fr);
+		gap: 80px;
+		margin-bottom: 67px;
+	}
+}

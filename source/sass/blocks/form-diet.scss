@@ -1,0 +1,23 @@
+.form-diet {
+	@media #{$mobile-only} {
+		margin: 22px 0 19px;
+	}
+
+	@media #{$tablet-only} {
+		margin: 72px 0 75px;
+	}
+}
+
+.form-diet__list {
+	display: flex;
+	flex-direction: column;
+	row-gap: 13px;
+	margin: 0;
+	padding: 25px 10px 25px 38px;
+}
+
+.form-diet__item {
+	&::marker {
+		color: transparent;
+	}
+}
