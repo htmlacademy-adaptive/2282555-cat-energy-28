@@ -5,21 +5,22 @@
 {% block main %}
 <main class="form-container">
 	<section class="questionnaire page__leveler">
-		<h1 class="questionnaire__title">Подбор программы</h1>
-		<p>Заполните анкету, и мы подберем программу питания для вашего кота</p>
+		<h1 class="questionnaire__title heading heading--lvl_1">Подбор программы</h1>
+		<div class="questionnaire__slogan">
+		<p>Заполните анкету, и мы подберем<br>программу питания для вашего кота</p></div>
 		<form class="questionnaire__form form" action="https://echo.htmlacademy.ru/" method="post">
 			<div class="form__container">
 			<fieldset class="form__info form__group form-info">
 				<legend class="visually-hidden">Информация о вашем коте</legend>
-				<div class="form__wrapper">
+				<div class="form__wrapper form__wrapper--info">
 				<label class="form__text" for="name-field">Имя:<span aria-hidden="true">*</span></label>
 				<input class="form__field" id="name-field" type="text" value="Барсик" placeholder="Имя кота" required>
 			</div>
-			<div class="form__wrapper">
+			<div class="form__wrapper form__wrapper--info">
 				<label class="form__text" for="weight-field">Вес (кг):<span aria-hidden="true">*</span></label>
 				<input class="form__field" id="weight-field" type="number" value="7" placeholder="Вес кота" required>
 			</div>
-			<div class="form__wrapper">
+			<div class="form__wrapper form__wrapper--info">
 				<label class="form__text" for="age-field">Возраст (лет):</label>
 				<input class="form__field" id="age-field" type="number" value="7" placeholder="Возраст кота">
 			</div>
@@ -43,20 +44,20 @@
 			</fieldset>
 		</div>
 			<fieldset class="form__contacts form-contacts">
-				<legend class="form__title heading heading--lvl_2">Контактные данные (владельца кота)</legend>
-				<div class="form__wrapper">
+				<legend class="form-contacts__title heading heading--lvl_2">Контактные данные (владельца кота)</legend>
+				<div class="form__wrapper form__wrapper--contacts">
 				<label class="form__text" for="email-field">E-mail:<span aria-hidden="true">*</span></label>
 				<span class="input-icon"></span>
 				<input class="form__field" id="email-field" type="email" placeholder="Введите e-mail" value="kuklachev@gmail.com" required>
 				</div>
-				<div class="form__wrapper">
+				<div class="form__wrapper form__wrapper--contacts">
 				<label class="form__text" for="phone-field">Телефон:<span aria-hidden="true">*</span></label>
 				<span class="input-icon"></span>
 				<input class="form__field" id="phone-field" type="tel" placeholder="Введите телефон" value="8 (960) 900-60-90" required>
 			</div>
 			</fieldset>
 			<div class="form__comment form-comment">
-				<label class="form__title heading heading--lvl_2" for="field-comment">Комментарий</label>
+				<label class="form-comment__title heading heading--lvl_2" for="field-comment">Комментарий</label>
 				<textarea class="form__field" name="comment" id="field-comment" placeholder="Расскажите обо всех повадках кота"></textarea>
 			</div>
 			<fieldset class="form__additions form-additions">
@@ -80,8 +81,10 @@
 					</li>
 				</ul>
 			</fieldset>
-			<button class="questionnaire__submit button" type="submit">отправить заявку</button>
+			<div class="form__button-wrapper">
+			<button class="questionnaire__submit button button--basic" type="submit">отправить заявку</button>
 			<span class="questionnaire__footnote" aria-hidden="true">* — Обязательные поля</span>
+		</div>
 		</form>
 	</section>
 </main>

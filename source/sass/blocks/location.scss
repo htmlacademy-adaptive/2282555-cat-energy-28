@@ -18,6 +18,7 @@
 	display: grid;
 	grid-template-columns: repeat(2, 1fr);
 	align-items: center;
+	z-index: 1;
 
 	@media #{$desktop-only} {
 		margin-block: 95px;
@@ -53,7 +54,7 @@
 }
 
 .location__map-container {
-	height: auto;
+	min-height: 400px;
 	display: grid;
 
 	@media #{$desktop-only} {

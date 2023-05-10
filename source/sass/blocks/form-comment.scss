@@ -2,3 +2,13 @@
 	display: flex;
 	flex-direction: column;
 }
+
+.form-comment__title {
+	@media #{$mobile-only} {
+		margin-bottom: 34px;
+	}
+
+	@media #{$not-mobile} {
+		margin-bottom: 76px;
+	}
+}
