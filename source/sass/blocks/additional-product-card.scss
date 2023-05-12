@@ -2,6 +2,7 @@
 	display: grid;
 	grid-template-columns: 1fr;
 	row-gap: 14px;
+	align-items: baseline;
 
 	@media #{$tablet-only} {
 		grid-template-columns: repeat(2, 1fr);
@@ -12,12 +13,11 @@
 	@media #{$desktop-only} {
 		grid-template-columns: repeat(3, 1fr);
 		column-gap: 80px;
-		padding: 16px 0;
+		padding: 26px 0;
 	}
 
 	@media #{$mobile-only} {
-		margin-top: 13px;
-		margin-bottom: 19px;
+		padding: 13px 0;
 	}
 }
 

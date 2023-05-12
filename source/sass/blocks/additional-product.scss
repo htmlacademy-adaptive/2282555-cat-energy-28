@@ -1,18 +1,21 @@
-//text
+
 .additional-product {
 	display: grid;
 	grid-template-columns: repeat(var(--column-count, 1), 1fr);
-	row-gap: 10px;
+	row-gap: 36px;
+	margin-bottom: 36px;
 
 	@media #{$not-mobile} {
 		--column-count: 2;
 		gap: 60px;
+		row-gap: 63px;
+		margin-bottom: 76px;
 	}
 
 	@media #{$desktop-only} {
 		--column-count: 4;
-		column-gap: 80px;
-		row-gap: 63px;
+		gap: 80px;
+		margin-bottom: 86px;
 	}
 }
 
@@ -37,6 +40,7 @@
 
 	@media #{$tablet-only} {
 		border: solid 1px #cdcdcd;
+		border-bottom: none;
 	}
 }
 
@@ -45,11 +49,14 @@
 }
 
 .additional-product__title {
-	margin-bottom: 0;
+	margin-bottom: 36px;
 	font-weight: 400;
+	margin-top: 50px;
 
 	@media #{$not-mobile} {
 		grid-column: span 2;
+		margin-top: 68px;
+		margin-bottom: 13px;
 	}
 
 	@media #{$desktop-only} {

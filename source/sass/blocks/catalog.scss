@@ -26,10 +26,11 @@
 		&::before {
 			content: "";
 			position: absolute;
-			width: calc(100% + 20px);
+			width: 100vw;
 			height: 1px;
-			right: -20px;
-			background-color: #ebebeb;
+			right: 0;
+			background-color: var(--line-color, #ebebeb);
+			box-shadow: 100vw 0 0 0 var(--line-color);
 		}
 	}
 }

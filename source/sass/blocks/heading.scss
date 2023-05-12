@@ -3,6 +3,26 @@
 	font-style: normal;
 	color: #000000;
 
+	&--decor {
+		position: relative;
+
+		@media #{$tablet-only} {
+			margin-left: 37px;
+		}
+
+		&::before {
+			content: "";
+			position: absolute;
+			width: 100vw;
+			height: 2px;
+			right: 0;
+			top: 20px;
+			background-color: var(--line-color, #68b738);
+			box-shadow: 100vw 0 0 0 #68b738;
+			z-index: -1;
+		}
+	}
+
 	&--lvl_1 {
 		font-size: 36px;
 		line-height: 40px;
@@ -24,6 +44,24 @@
 		@media #{$not-mobile} {
 			font-size: 36px;
 			line-height: 36px;
+		}
+	}
+}
+
+.heading__wrapper {
+	position: relative;
+
+	&::after {
+		position: absolute;
+		content: "";
+		width: calc(100% + 40px + 35px);
+		height: 100%;
+		background-color: var(--base-color, #ffffff);
+		right: -37px;
+		z-index: -1;
+
+		@media #{$mobile-only} {
+			right: -21px;
 		}
 	}
 }

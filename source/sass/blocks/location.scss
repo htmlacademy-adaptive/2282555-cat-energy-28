@@ -7,9 +7,11 @@
 }
 
 .location__text-container {
+	pointer-events: none;
+
 	@media #{$desktop-only} {
 		grid-area: 1 / 1 / 1 / 1;
-		z-index: 2;
+		z-index: 3;
 	}
 }
 
@@ -19,6 +21,7 @@
 	grid-template-columns: repeat(2, 1fr);
 	align-items: center;
 	z-index: 1;
+	pointer-events: initial;
 
 	@media #{$desktop-only} {
 		margin-block: 95px;
@@ -70,7 +73,7 @@
 	grid-area: 1 / 1 / 1 / 1;
 
 	@media #{$desktop-only} {
-		z-index: -1;
+		z-index: 1;
 	}
 }
 
