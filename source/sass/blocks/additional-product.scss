@@ -33,10 +33,20 @@
 	&::marker {
 		color: transparent;
 	}
+	border-top: solid 1px #cdcdcd;
+
+	@media #{$tablet-only} {
+		border: solid 1px #cdcdcd;
+	}
+}
+
+.additional-product__item:last-child {
+	border-bottom: solid 1px #cdcdcd;
 }
 
 .additional-product__title {
 	margin-bottom: 0;
+	font-weight: 400;
 
 	@media #{$not-mobile} {
 		grid-column: span 2;

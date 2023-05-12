@@ -4,7 +4,9 @@
 	}
 
 	@media #{$desktop-only} {
-		margin-bottom: 82px;
+		min-height: 552px;
+		padding-top: 32px;
+		padding-bottom: 44px;
 	}
 
 	&::before {

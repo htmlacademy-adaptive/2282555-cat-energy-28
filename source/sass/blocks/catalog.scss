@@ -21,4 +21,15 @@
 	&::marker {
 		color: transparent;
 	}
+
+	@media #{$mobile-only} {
+		&::before {
+			content: "";
+			position: absolute;
+			width: calc(100% + 20px);
+			height: 1px;
+			right: -20px;
+			background-color: #ebebeb;
+		}
+	}
 }

@@ -5,11 +5,11 @@
 {% block main %}
 <main class="catalog-container">
 	<section class="catalog page__leveler">
-		<h1 class="catalog__title heading heading__lvl_1">Каталог продукции</h1>
+		<h1 class="catalog__title heading heading--lvl_1">Каталог продукции</h1>
 		<ul class="catalog__list">
 			<li class="catalog__item product-card">
 				<h3 class="product-card__title">Cat Energy PRO 500 г</h3>
-				<div class="product-card__image-wrapper">
+				<div class="product-card__image-wrapper product-card__image-wrapper--small">
 					{% include "./templates/picture.twig" with {name: "products/pro-chicken500", class: "product-card__image", alt: "Упаковка корма Cat Energy в орнажевых оттенках со вкусом курицы."} %}
 				</div>
 				<div class="product-card__characteristic-wrapper">
@@ -55,7 +55,7 @@
 			</li>
 			<li class="catalog__item product-card">
 				<h3 class="product-card__title">Cat Energy PRO 500 г</h3>
-				<div class="product-card__image-wrapper">
+				<div class="product-card__image-wrapper product-card__image-wrapper--small">
 					{% include "./templates/picture.twig" with {name: "products/pro-fish500", class: "product-card__image", alt: "Упаковка корма Cat Energy в зеленых оттенках со вкусом рыбы."} %}
 				</div>
 				<div class="product-card__characteristic-wrapper">
@@ -101,7 +101,7 @@
 			</li>
 			<li class="catalog__item product-card">
 				<h3 class="product-card__title">Cat Energy SLIM 500 г</h3>
-				<div class="product-card__image-wrapper">
+				<div class="product-card__image-wrapper product-card__image-wrapper--small">
 					{% include "./templates/picture.twig" with {name: "products/slim-buckwheat500", class: "product-card__image", alt: "Упаковка корма Cat Energy со вкусом гречки в голубых оттенках."} %}
 				</div>
 				<div class="product-card__characteristic-wrapper">
@@ -147,7 +147,7 @@
 			</li>
 			<li class="catalog__item product-card">
 				<h3 class="product-card__title">Cat Energy SLIM 500 г</h3>
-				<div class="product-card__image-wrapper">
+				<div class="product-card__image-wrapper product-card__image-wrapper--small">
 					{% include "./templates/picture.twig" with {name: "products/slim-rice500", class: "product-card__image", alt: "Упаковка корма Cat Energy в фиолетовых оттенках со вкусом риса."} %}
 				</div>
 				<div class="product-card__characteristic-wrapper">
@@ -169,9 +169,11 @@
 				<a class="product-card__button button button--basic" href="#">заказать</a>
 			</li>
 			<li class="catalog__item product-card product-card--more">
-				<h3 class="product-card__title">Показать еще 100500 товаров</h3>
+				<div class="product-card__text-wrapper">
+				<h3 class="product-card__title product-card__title--more">Показать еще 100500 товаров</h3>
 				<div class="product-card__description">На самом деле вкусов гораздо больше!</div>
-				<a class="product-card__button button button--gray" href="#">показать все</a>
+			</div>
+				<a class="product-card__button product-card__button--more button button--gray" href="#">показать все</a>
 			</li>
 		</ul>
 	</section>
