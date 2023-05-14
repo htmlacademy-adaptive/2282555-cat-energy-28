@@ -18,3 +18,40 @@
 		margin-bottom: 76px;
 	}
 }
+
+.form-contacts__field {
+	position: relative;
+	padding-right: 30px;
+}
+
+.form-contacts__icon {
+	position: absolute;
+	display: block;
+	box-sizing: border-box;
+	width: 20px;
+	height: 20px;
+	z-index: 2;
+	right: var(--icon-position, 11vw);
+	mask-image: var(--icon);
+	background-color: var(--icon-color, #222222);
+
+	&--phone {
+		--icon: url("../../icons/stack.svg#form_phone");
+	}
+
+	&--email {
+		--icon: url("../../icons/stack.svg#form_email");
+
+		@media #{$desktop-only} {
+			--icon-position: 54vw;
+		}
+	}
+
+	.form__field--erorr + & {
+		background-color: #ff8282;
+	}
+
+	.form__field:focus + & {
+		background-color: #68b738;
+	}
+}

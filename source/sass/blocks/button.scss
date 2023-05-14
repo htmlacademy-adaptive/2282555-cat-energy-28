@@ -1,5 +1,5 @@
 .button {
-
+	font-family: var(--accent-font);
 	color: #ffffff;
 	text-decoration: none;
 	text-transform: uppercase;
@@ -9,12 +9,19 @@
 	padding: 10px;
 	background-color: var(--accent-color);
 
-	&--basic {
+	&--color_basic {
 		--accent-color: #68b738;
 	}
 
-	&--gray {
+	&--color_gray {
 		--accent-color: #f2f2f2;
 		color: #444444;
+	}
+
+	&--main {
+		@media #{$not-mobile} {
+			font-size: 20px;
+			line-height: 20px;
+		}
 	}
 }

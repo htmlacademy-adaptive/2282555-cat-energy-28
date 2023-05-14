@@ -19,6 +19,13 @@
 }
 
 .form-additions__item {
+	display: flex;
+	gap: 16px;
+
+	@media #{$not-mobile} {
+		gap: 20px;
+	}
+
 	&::marker {
 		color: transparent;
 	}
@@ -36,4 +43,39 @@
 	@media #{$desktop-only} {
 		margin-bottom: 57px;
 	}
+}
+
+.form-additions__control {
+	--check-color: hsl(97 53% 47% / 1);
+	appearance: none;
+	background-color: #ffffff;
+	margin: 0;
+	width: 30px;
+	height: 30px;
+	border: solid 1px var(--color, hsl(0 0% 80% / 1));
+	display: grid;
+	place-content: center;
+
+	&:hover {
+		--color: hsl(0 0% 73% / 1);
+	}
+
+	&:checked {
+		&::before {
+			width: 30px;
+			height: 30px;
+			content: "";
+			mask: url("../../icons/stack.svg#tick-checkbox") no-repeat center / contain;
+			background-color: var(--check-color);
+		}
+	}
+
+	&:disabled {
+		--color: hsl(0 0% 73% / 0.3);
+		--check-color: hsl(97 53% 47% / 0.3);
+	}
+}
+
+.form-additions__control:disabled + .form-additions__text {
+	color: hsl(0 0% 0% / 0.3);
 }

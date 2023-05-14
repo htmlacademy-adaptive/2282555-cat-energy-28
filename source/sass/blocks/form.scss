@@ -11,6 +11,7 @@
 
 	@media #{$tablet-only} {
 		row-gap: 71px;
+		margin-right: 36px;
 	}
 
 	@media #{$desktop-only} {
@@ -89,13 +90,19 @@
 }
 
 .form__field {
+	font-family: var(--accent-font);
 	outline: solid var(--border-width, 1px) var(--field-color, #e7e7e7);
+	border: none;
 	padding: 15px 14px;
 	width: 100%;
-	border: none;
+	box-sizing: border-box;
 	color: #444444;
 	font-size: 16px;
 	text-transform: uppercase;
+
+	&::placeholder {
+		color: #444444;
+	}
 
 	@media #{$not-mobile} {
 		font-size: 20px;
@@ -111,7 +118,7 @@
 		--border-width: 2px;
 	}
 
-	&:invalid {
+	&--error {
 		--field-color: #ff8282;
 		border-width: 2px;
 	}
@@ -119,6 +126,7 @@
 
 .form__group {
 	border: none;
+	outline: none;
 	margin: 0;
 	padding: 0;
 }

@@ -7,3 +7,14 @@
 		row-gap: 20px;
 	}
 }
+
+
+.form-info__number {
+	appearance: textfield;
+	user-select: none;
+}
+
+.form-info__number::-webkit-outer-spin-button,
+.form-info__number::-webkit-inner-spin-button {
+	appearance: none;
+}

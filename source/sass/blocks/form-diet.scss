@@ -1,3 +1,9 @@
+.form-diet {
+	@media #{$not-mobile} {
+		outline: solid 1px #e7e7e7;
+		padding: 25px 15px 25px 28px;
+	}
+}
 
 .form-diet__list {
 	display: flex;
@@ -12,7 +18,87 @@
 }
 
 .form-diet__item {
+	display: flex;
+	gap: 16px;
+	align-items: center;
+
+	@media #{$mobile-only} {
+		gap: 20px;
+	}
+
 	&::marker {
 		color: transparent;
 	}
+}
+
+.form-diet__item:first-child {
+	--line-color: #ebebeb;
+	position: relative;
+
+	@media #{$mobile-only} {
+		&::before {
+			content: "";
+			position: absolute;
+			width: 100vw;
+			height: 1px;
+			right: 0;
+			top: -23px;
+			background-color: var(--line-color);
+			box-shadow: 100vw 0 0 0 var(--line-color);
+		}
+	}
+}
+
+.form-diet__item:last-child {
+	@media #{$mobile-only} {
+		--line-color: #ebebeb;
+		position: relative;
+
+		&::before {
+			content: "";
+			position: absolute;
+			width: 100vw;
+			height: 1px;
+			right: 0;
+			bottom: -20px;
+			background-color: var(--line-color);
+			box-shadow: 100vw 0 0 0 var(--line-color);
+		}
+	}
+}
+
+.form-diet__control {
+	--check-color: hsl(97 53% 47% / 1);
+	appearance: none;
+	background-color: #ffffff;
+	margin: 0;
+	width: 40px;
+	height: 40px;
+	border: solid 1px var(--color, hsl(0 0% 80% / 1));
+	border-radius: 20px;
+	display: grid;
+	place-content: center;
+
+	&:hover {
+		--color: hsl(0 0% 73% / 1);
+	}
+
+	&:checked {
+		&::before {
+			width: 40px;
+			height: 40px;
+			content: "";
+			mask: url("../../icons/stack.svg#tick-radio") no-repeat center / contain;
+			background-color: var(--check-color);
+		}
+	}
+
+	&:disabled {
+		--color: hsl(0 0% 73% / 0.3);
+		--check-color: hsl(97 53% 47% / 0.3);
+	}
+}
+
+.form-diet__control:disabled + .form-diet__text {
+	color: hsl(0 0% 0% / 0.3);
 }
