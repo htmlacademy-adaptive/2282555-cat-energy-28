@@ -1,9 +1,31 @@
 .example {
+	--base-color: #f2f2f2;
+	position: relative;
 	display: flex;
 	flex-direction: column;
 
 	@media #{$desktop-only} {
 		flex-direction: row;
+		gap: 200px;
+	}
+
+	&::after {
+		content: "";
+		position: absolute;
+		width: 100vw;
+		right: 0;
+		bottom: 0;
+		background-color: var(--base-color);
+		box-shadow: 100vw 0 0 0 var(--base-color);
+		z-index: -1;
+
+		@media #{$mobile-only} {
+			height: 100%;
+		}
+
+		@media #{$not-mobile} {
+			height: 462px;
+		}
 	}
 }
 
@@ -12,7 +34,7 @@
 	line-height: 24px;
 
 	@media #{$desktop-only} {
-		width: 660px;
+		width: 460px;
 	}
 }
 
@@ -27,7 +49,8 @@
 	}
 
 	@media #{$desktop-only} {
-		grid-template-columns: repeat(2, 160px);
+
+		grid-template-columns: repeat(2, 11vw);
 		column-gap: 42px;
 	}
 }
@@ -36,20 +59,27 @@
 	display: flex;
 
 	&--block {
-		position: relative;
 		flex-direction: column-reverse;
 		align-items: center;
 		text-align: center;
-		row-gap: 8px;
-		justify-content: flex-start;
+		justify-content: start;
+		box-shadow: inset 0 0 0 1px #cdcdcd;
+		border-radius: 3px;
 	}
 
 	&--line {
 		grid-column: span 2;
+		font-family: var(--accent-font);
 		font-size: 14px;
 		line-height: 20px;
 		color: #000000;
 		justify-items: center;
+		text-transform: uppercase;
+
+		@media #{$not-mobile} {
+			font-size: 20px;
+			line-height: 20px;
+		}
 
 		@media #{$tablet-only} {
 			flex-direction: column;
@@ -58,7 +88,7 @@
 		}
 
 		@media #{$desktop-only} {
-			justify-content: space-between;
+			gap: 63px;
 		}
 	}
 }
@@ -67,9 +97,35 @@
 	margin: 0;
 
 	&--block {
+		font-family: var(--accent-font);
 		font-size: 24px;
 		line-height: 24px;
 		color: #000000;
+		padding-top: 14px;
+
+		@media #{$not-mobile} {
+			padding-bottom: 11px;
+		}
+	}
+}
+
+.example__name {
+	font-size: 12px;
+	line-height: 12px;
+	background-color: var(--base-color, #f2f2f2);
+	z-index: 2;
+	padding: 0 5px;
+	transform: translateY(2px);
+
+	@media #{$mobile-only} {
+		max-width: 77px;
+		padding: 0 5px;
+		transform: translateY(10px);
+	}
+
+	@media #{$tablet-only} {
+		--base-color: #ffffff;
+		transform: translateY(5px);
 	}
 }
 

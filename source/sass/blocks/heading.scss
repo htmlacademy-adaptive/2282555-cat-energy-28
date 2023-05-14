@@ -1,5 +1,6 @@
 .heading {
 	font-family: var(--accent-font);
+	--line-color: #68b738;
 	font-style: normal;
 	color: #000000;
 
@@ -17,8 +18,8 @@
 			height: 2px;
 			right: 0;
 			top: 20px;
-			background-color: var(--line-color, #68b738);
-			box-shadow: 100vw 0 0 0 #68b738;
+			background-color: var(--line-color);
+			box-shadow: 100vw 0 0 0 var(--line-color);
 			z-index: -1;
 		}
 	}
@@ -46,12 +47,25 @@
 			line-height: 36px;
 		}
 	}
+
+	&--lvl_3 {
+		font-size: 24px;
+		line-height: 37px;
+		color: #000000;
+		text-transform: uppercase;
+		font-weight: 400;
+
+		@media #{$not-mobile} {
+			font-size: 36px;
+			line-height: 36px;
+		}
+	}
 }
 
 .heading__wrapper {
 	position: relative;
 
-	&::after {
+	&::before {
 		position: absolute;
 		content: "";
 		width: calc(100% + 40px + 35px);

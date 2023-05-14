@@ -3,31 +3,54 @@
 }
 
 .features__list {
-	--column-count: 1;
-	display: grid;
-	gap: 20px;
-	grid-template-columns: repeat(var(--column-count, 1), 1fr);
 	padding: 0;
 	margin: 0;
+	display: grid;
+	grid-template-columns: repeat(var(--column-count, 1), 1fr);
+	row-gap: 20px;
+	counter-reset: section;
 
-	@media #{$not-mobile} {
+	@media #{$tablet-only} {
+		margin-right: 89px;
 		--column-count: 2;
-		gap: 37px;
-		justify-content: space-around;
+		row-gap: 37px;
+		column-gap: 137px;
 	}
 
 	@media #{$desktop-only} {
+		column-gap: 77px;
 		--column-count: 4;
 	}
 }
 
 .features__item {
 	position: relative;
-	padding-left: 80px;
+	display: grid;
+	grid-template-columns: 60px 1fr;
+	gap: 20px;
 
-	@media #{$mobile-only} {
-		&::marker {
-			color: transparent;
+	&::marker {
+		color: transparent;
+	}
+
+	@media #{$not-mobile} {
+		font-size: 16px;
+		line-height: 24px;
+		grid-template-columns: 1fr;
+		grid-template-rows: 80px 1fr;
+		gap: 31px;
+		min-height: 240px;
+
+		&::after {
+			position: absolute;
+			color: #f2f2f2;
+			font-size: 280px;
+			font-family: var(--accent-font);
+			right: 21px;
+			counter-increment: section;
+			content: counter(section) " ";
+			z-index: -1;
+			transform: translateY(90px);
 		}
 	}
 
@@ -47,17 +70,22 @@
 		--icon: url("../../icons/stack.svg#features_alarm");
 	}
 
-	&::after {
-		position: absolute;
-		left: 0;
-		top: 0;
+	&::before {
+		display: block;
 		content: "";
 		width: 60px;
 		height: 60px;
+		left: 0;
 		background-color: #68b738;
 		background-image: var(--icon);
 		background-repeat: no-repeat;
 		background-position: center;
 		background-size: 40px;
+
+		@media #{$not-mobile} {
+			width: 80px;
+			height: 80px;
+			top: 40px;
+		}
 	}
 }

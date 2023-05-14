@@ -75,8 +75,9 @@
 }
 
 .form__text {
+	flex-shrink: 0;
 	text-transform: uppercase;
-	font-family: var(--accent-color);
+	font-family: var(--accent-font);
 
 	&--radio {
 		color: #222222;
@@ -90,7 +91,7 @@
 .form__field {
 	outline: solid var(--border-width, 1px) var(--field-color, #e7e7e7);
 	padding: 15px 14px;
-	flex-grow: 1;
+	width: 100%;
 	border: none;
 	color: #444444;
 	font-size: 16px;
@@ -114,4 +115,10 @@
 		--field-color: #ff8282;
 		border-width: 2px;
 	}
+}
+
+.form__group {
+	border: none;
+	margin: 0;
+	padding: 0;
 }

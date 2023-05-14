@@ -34,3 +34,24 @@
 		}
 	}
 }
+
+.catalog__item:last-child {
+	--line-color: #ebebeb;
+	margin-top: 85px;
+
+	@media #{$mobile-only} {
+		margin: 0;
+		position: relative;
+
+		::after {
+			content: "";
+			position: absolute;
+			width: 100vw;
+			height: 1px;
+			right: 0;
+			bottom: -25px;
+			background-color: var(--line-color);
+			box-shadow: 100vw 0 0 0 var(--line-color);
+		}
+	}
+}
