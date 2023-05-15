@@ -1,6 +1,4 @@
-.features__title {
-	margin-bottom: 30px;
-}
+
 
 .features__list {
 	padding: 0;
@@ -9,6 +7,10 @@
 	grid-template-columns: repeat(var(--column-count, 1), 1fr);
 	row-gap: 20px;
 	counter-reset: section;
+
+	@media #{$mobile-only} {
+		padding: 40px 0;
+	}
 
 	@media #{$tablet-only} {
 		margin-right: 89px;

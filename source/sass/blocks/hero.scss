@@ -79,6 +79,7 @@
 		line-height: 36px;
 		margin-block: 27px;
 		text-align: center;
+		margin-bottom: 10px;
 	}
 
 	@media #{$tablet-only} {
@@ -87,10 +88,15 @@
 }
 
 .hero__slogan {
+	margin: 0;
+	text-transform: uppercase;
+	font-family: var(--accent-font);
+
 	@media #{$mobile-only} {
 		color: #ffffff;
 		line-height: 14px;
 		text-align: center;
+		margin-bottom: 16px;
 	}
 
 	@media #{$not-mobile} {

@@ -2,7 +2,7 @@
 .nutrition-programs {
 	display: grid;
 	gap: 20px;
-	text-align: center;
+	text-align: left;
 
 	@media #{$mobile-only} {
 		padding: 20px 0;
@@ -21,9 +21,10 @@
 	display: flow-root;
 	background-color: #f2f2f2;
 	padding: 20px;
+	padding-bottom: 14px;
 	--circle-diameter: calc(100% * 200 / 280);
 	--icon-size: 70px;
-	--icon-position: right;
+	--icon-position: left;
 
 	&--slim {
 		--icon: url("../../icons/stack.svg#cat_sitting");
@@ -39,7 +40,7 @@
 			position: absolute;
 			width: calc(100% - 20px - 20px);
 			height: 1px;
-			bottom: 57px;
+			bottom: 58px;
 			right: 20px;
 			background-color: #d9d9d9;
 		}
@@ -70,6 +71,10 @@
 				#68b738 calc(var(--circle-diameter) - 0.5px),
 				transparent calc(var(--circle-diameter) + 0.5px)
 			);
+
+		@media #{$mobile-only} {
+			margin: -5px 10px 0 -8px;
+		}
 	}
 }
 
@@ -78,8 +83,6 @@
 }
 
 .nutrition-programs__text-wrapper {
-	margin-bottom: 37px;
-
 	@media #{$tablet-only} {
 		margin-bottom: 27px;
 	}

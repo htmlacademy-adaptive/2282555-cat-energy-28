@@ -2,6 +2,14 @@
 	min-height: 65px;
 	display: flex;
 	align-items: center;
+
+	&:hover {
+		opacity: 0.8;
+	}
+
+	&:active {
+		opacity: 0.6;
+	}
 }
 
 .logo__text--header {
@@ -11,12 +19,12 @@
 }
 
 .logo__footer {
-	&:hover {
-		color: hsl(0 0% 24% / 1);
+	&:hover,
+	&:focus-visible {
+		fill: hsl(0 0% 24% / 1);
 	}
 
-	&:focus,
 	&:active {
-		color: hsl(0 0% 24% / 0.3);
+		fill: hsl(0 0% 24% / 0.3);
 	}
 }

@@ -1,5 +1,6 @@
 .navigation {
 	display: flex;
+	position: relative;
 
 	@media #{$mobile-only} {
 		justify-content: center;
@@ -12,6 +13,14 @@
 
 .navigation__wrapper {
 	align-self: center;
+
+	@media #{$mobile-only} {
+		position: absolute;
+		background-color: #ffffff;
+		width: 100vw;
+		top: 0;
+		z-index: 1;
+	}
 }
 
 .navigation--closed .navigation__wrapper {
@@ -24,17 +33,47 @@
 	margin: 0;
 	padding: 0;
 	display: flex;
+	position: relative;
+	--line-color: #ebebeb;
 
 	@media #{$mobile-only} {
 		flex-direction: column;
 		gap: 46px;
 		padding: 22px 0 24px;
 		text-align: center;
+
+		&::after {
+			content: "";
+			position: absolute;
+			width: 100vw;
+			height: 1px;
+			right: 0;
+			bottom: 0;
+			background-color: var(--line-color,);
+			box-shadow: 100vw 0 0 0 var(--line-color);
+			z-index: 2;
+		}
 	}
 }
 
 
 .navigation__item {
+	position: relative;
+
+	@media #{$mobile-only} {
+		&::before {
+			content: "";
+			position: absolute;
+			width: 100vw;
+			height: 1px;
+			right: 0;
+			top: -22px;
+			background-color: var(--line-color, #ebebeb);
+			box-shadow: 100vw 0 0 0 var(--line-color);
+			z-index: 2;
+		}
+	}
+
 	&::marker {
 		color: transparent;
 	}
@@ -55,6 +94,7 @@
 		font-size: 20px;
 		line-height: 20px;
 		font-weight: 500;
+		padding: 22px 15px 24px;
 	}
 
 	@media #{$desktop-only} {
@@ -68,7 +108,7 @@
 	height: 24px;
 	border: none;
 	position: absolute;
-	top: 20px;
+	top: -47px;
 	right: 0;
 	z-index: 2;
 	cursor: pointer;

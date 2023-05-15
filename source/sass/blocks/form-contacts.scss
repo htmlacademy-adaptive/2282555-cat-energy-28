@@ -20,8 +20,11 @@
 }
 
 .form-contacts__field {
+	padding-right: 45px;
+}
+
+.form-contacts__wrapper {
 	position: relative;
-	padding-right: 30px;
 }
 
 .form-contacts__icon {
@@ -31,9 +34,10 @@
 	width: 20px;
 	height: 20px;
 	z-index: 2;
-	right: var(--icon-position, 11vw);
+	right: 20px;
 	mask-image: var(--icon);
 	background-color: var(--icon-color, #222222);
+	pointer-events: none;
 
 	&--phone {
 		--icon: url("../../icons/stack.svg#form_phone");
@@ -41,10 +45,6 @@
 
 	&--email {
 		--icon: url("../../icons/stack.svg#form_email");
-
-		@media #{$desktop-only} {
-			--icon-position: 54vw;
-		}
 	}
 
 	.form__field--erorr + & {
