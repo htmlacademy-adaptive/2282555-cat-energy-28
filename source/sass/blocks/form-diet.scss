@@ -69,15 +69,20 @@
 
 .form-diet__control {
 	--check-color: hsl(97 53% 47% / 1);
+	--control-size: 40px;
 	appearance: none;
 	background-color: #ffffff;
 	margin: 0;
-	width: 40px;
-	height: 40px;
+	width: var(--control-size);
+	height: var(--control-size);
 	border: solid 1px var(--color, hsl(0 0% 80% / 1));
 	border-radius: 20px;
 	display: grid;
 	place-content: center;
+
+	@media #{$mobile-only} {
+		--control-size: 30px;
+	}
 
 	&:hover {
 		--color: hsl(0 0% 73% / 1);
@@ -85,8 +90,8 @@
 
 	&:checked {
 		&::before {
-			width: 40px;
-			height: 40px;
+			width: var(--control-size);
+			height: var(--control-size);
 			content: "";
 			mask: url("../../icons/stack.svg#tick-radio") no-repeat center / contain;
 			background-color: var(--check-color);
