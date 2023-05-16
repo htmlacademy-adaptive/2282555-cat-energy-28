@@ -1,5 +1,5 @@
 <footer class="page__footer">
-	<section class="location">
+	<section class="location  {% if permalink == "./" %}location--background_white{% endif %}">
 		<div class="page__leveler  location__text-container">
 			<div class="location__text-wrapper">
 				<h2 class="visually-hidden">Адрес магазина</h2>
@@ -17,10 +17,10 @@
 </noscript>
 </div>
 </section>
-	</section>
+
 	<section class="contacts page__leveler">
 		<h2 class="visually-hidden">Контакты</h2>
-		<a class="logo" href="./">
+		<a class="logo" href="./"{% if permalink == "./" %}aria-current="page"{% endif %}>
 			<svg class="logo__footer" width="128" height="24" role="img" aria-label="Логотип Cat Energy ведет на главную страницу сайта">
 				<use href="./img/logo.svg#brand-name-footer" aria-hidden="true"></use>
 			</svg>

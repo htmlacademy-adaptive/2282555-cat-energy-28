@@ -4,6 +4,16 @@
 	@media #{$desktop-only} {
 		grid-template-columns: repeat(2, 1fr);
 	}
+
+	&--background_white {
+		@media #{$mobile-only} {
+			background-color: #ffffff;
+		}
+
+		@media #{$tablet-only} {
+			background-color: #ffffff;
+		}
+	}
 }
 
 .location__text-container {
