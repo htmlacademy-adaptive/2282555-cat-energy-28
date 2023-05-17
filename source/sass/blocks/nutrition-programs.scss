@@ -5,7 +5,11 @@
 	text-align: left;
 
 	@media #{$mobile-only} {
-		padding: 20px 0;
+		padding: 20px 0 19px;
+	}
+
+	@media #{$tablet-only} {
+		gap: 30px;
 	}
 
 	@media #{$desktop-only} {
@@ -53,6 +57,9 @@
 	@media #{$tablet-only} {
 		--icon-size: 280px;
 		--icon-position: right;
+		padding-left: 53px;
+		padding-bottom: 42px;
+		padding-right: 41px;
 	}
 
 	@media #{$desktop-only} {
@@ -75,16 +82,27 @@
 		@media #{$mobile-only} {
 			margin: -5px 10px 0 -8px;
 		}
+
+		@media #{$tablet-only} {
+			transform: translate(20px, 3px);
+		}
 	}
 }
 
 .nutrition-programs__title {
 	margin: 10px auto 29px;
+
+	@media #{$tablet-only} {
+		margin-top: 27px;
+		margin-bottom: 25px;
+	}
 }
 
 .nutrition-programs__text-wrapper {
 	@media #{$tablet-only} {
 		margin-bottom: 27px;
+		font-size: 16px;
+		line-height: 24px;
 	}
 
 	@media #{$desktop-only} {
@@ -130,5 +148,9 @@
 		@media #{$not-mobile} {
 			right: -25px;
 		}
+	}
+
+	@media #{$tablet-only} {
+		margin-top: 14px;
 	}
 }

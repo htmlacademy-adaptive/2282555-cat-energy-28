@@ -5,7 +5,11 @@
 
 .form-comment__title {
 	@media #{$mobile-only} {
-		margin-bottom: 34px;
+		margin-bottom: 36px;
+	}
+
+	@media #{$tablet-only} {
+		margin: -3px 0 73px 0;
 	}
 
 	@media #{$not-mobile} {
@@ -17,9 +21,18 @@
 	box-sizing: border-box;
 	padding: 9px 12px 9px 15px;
 	min-height: 132px;
+	width: 100%;
+
+	@media #{$mobile-only} {
+		min-height: 150px;
+	}
 
 	@media #{$not-mobile} {
-		min-height: 153px;
-		padding: 10px 12px 10px 19px;
+		min-height: 170px;
+		padding: 10px 19px;
+	}
+
+	@media #{$tablet-only} {
+		padding: 8px 19px;
 	}
 }

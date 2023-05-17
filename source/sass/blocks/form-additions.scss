@@ -4,12 +4,12 @@
 	padding: 0;
 	display: grid;
 	grid-template-columns: 1fr;
-	row-gap: 19px;
+	row-gap: 12px;
 
 	@media #{$tablet-only} {
 		grid-template-columns: repeat(2, 1fr);
-		column-gap: 60px;
-		row-gap: 37px;
+		column-gap: 56px;
+		row-gap: 30px;
 	}
 
 	@media #{$desktop-only} {
@@ -21,6 +21,7 @@
 .form-additions__item {
 	display: flex;
 	gap: 16px;
+	align-items: center;
 
 	@media #{$not-mobile} {
 		gap: 20px;
@@ -37,7 +38,8 @@
 	}
 
 	@media #{$tablet-only} {
-		margin-bottom: 47px;
+		margin-bottom: 59px;
+		margin-left: 0;
 	}
 
 	@media #{$desktop-only} {
@@ -56,6 +58,7 @@
 	border: solid 1px var(--color, hsl(0 0% 80% / 1));
 	display: grid;
 	place-content: center;
+	flex-shrink: 0;
 
 	@media #{$mobile-only} {
 		--control-size: 30px;

@@ -4,26 +4,6 @@
 	font-style: normal;
 	color: #000000;
 
-	&--decor {
-		position: relative;
-
-		@media #{$tablet-only} {
-			margin-left: 37px;
-		}
-
-		&::before {
-			content: "";
-			position: absolute;
-			width: 100vw;
-			height: 2px;
-			right: 0;
-			top: 20px;
-			background-color: var(--line-color);
-			box-shadow: 100vw 0 0 0 var(--line-color);
-			z-index: -1;
-		}
-	}
-
 	&--lvl_1 {
 		font-size: 36px;
 		line-height: 40px;
@@ -41,6 +21,7 @@
 		font-size: 24px;
 		line-height: 26px;
 		color: #000000;
+		padding: 0;
 
 		@media #{$not-mobile} {
 			font-size: 36px;
@@ -68,7 +49,7 @@
 	&::before {
 		position: absolute;
 		content: "";
-		width: calc(100% + 40px + 35px);
+		width: calc(100% + 40px + 37px);
 		height: 100%;
 		background-color: var(--base-color, #ffffff);
 		right: -37px;
@@ -76,6 +57,27 @@
 
 		@media #{$mobile-only} {
 			right: -21px;
+		}
+	}
+}
+
+.heading--decor {
+
+	position: relative;
+
+	&::before {
+		content: "";
+		position: absolute;
+		width: 100vw;
+		height: 2px;
+		right: 0;
+		top: 15px;
+		background-color: var(--line-color);
+		box-shadow: 100vw 0 0 0 var(--line-color);
+		z-index: -1;
+
+		@media #{$tablet-only} {
+			top: 22px;
 		}
 	}
 }

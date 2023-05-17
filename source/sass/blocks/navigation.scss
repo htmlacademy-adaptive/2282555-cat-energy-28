@@ -2,6 +2,7 @@
 	display: flex;
 	position: relative;
 	--border-color: #68b738;
+	flex-wrap: wrap;
 
 	@media #{$mobile-only} {
 		justify-content: center;
@@ -9,6 +10,11 @@
 
 	@media #{$not-mobile} {
 		margin-left: auto;
+		max-width: 500px;
+	}
+
+	@media #{$desktop-only} {
+		max-width: 600px;
 	}
 
 	&--text_white {
@@ -41,6 +47,8 @@
 	margin: 0;
 	padding: 0;
 	display: flex;
+	flex-wrap: wrap;
+	gap: 15px;
 	position: relative;
 	--line-color: #ebebeb;
 
@@ -92,7 +100,7 @@
 	color: var(--link-color, #000000);
 	text-decoration: none;
 	text-transform: uppercase;
-	padding: 20px;
+	padding: 10px;
 	font-size: 18px;
 	line-height: 24px;
 	font-style: normal;
@@ -120,14 +128,16 @@
 }
 
 .navigation__link[aria-current="page"] {
-	&::after {
-		position: absolute;
-		content: "";
-		height: 2px;
-		bottom: 8px;
-		right: 20px;
-		left: 20px;
-		background-color: var(--border-color);
+	@media #{$not-mobile} {
+		&::after {
+			position: absolute;
+			content: "";
+			height: 2px;
+			bottom: 0;
+			right: 20px;
+			left: 20px;
+			background-color: var(--border-color);
+		}
 	}
 }
 

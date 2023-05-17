@@ -3,6 +3,10 @@
 	grid-template-columns: 1fr;
 	gap: 14px;
 
+	@media #{$tablet-only} {
+		row-gap: 25px;
+	}
+
 	@media #{$desktop-only} {
 		grid-template-columns: repeat(2, 1fr);
 		gap: 80px;
@@ -11,16 +15,28 @@
 
 .form-contacts__title {
 	@media #{$mobile-only} {
-		margin-bottom: 35px;
+		margin-bottom: 36px;
 	}
 
 	@media #{$not-mobile} {
 		margin-bottom: 76px;
 	}
+
+	@media #{$tablet-only} {
+		margin-left: 0;
+	}
 }
 
 .form-contacts__field {
-	padding-right: 45px;
+	padding: 10px 45px 10px 15px;
+
+	@media #{$tablet-only} {
+		padding-left: 19px;
+	}
+
+	@media #{$desktop-only} {
+		padding-left: 20px;
+	}
 }
 
 .form-contacts__wrapper {
@@ -34,7 +50,7 @@
 	width: 20px;
 	height: 20px;
 	z-index: 2;
-	right: 20px;
+	right: 15px;
 	mask-image: var(--icon);
 	background-color: var(--icon-color, #222222);
 	pointer-events: none;

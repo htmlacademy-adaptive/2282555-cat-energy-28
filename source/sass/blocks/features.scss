@@ -1,4 +1,11 @@
+.features__title {
+	margin: 0 1px;
 
+	@media #{$tablet-only} {
+		margin-top: 45px;
+		margin-bottom: 71px;
+	}
+}
 
 .features__list {
 	padding: 0;
@@ -9,14 +16,14 @@
 	counter-reset: section;
 
 	@media #{$mobile-only} {
-		padding: 40px 0;
+		padding: 39px 1px 50px 1px;
 	}
 
 	@media #{$tablet-only} {
-		margin-right: 89px;
+		margin-right: 70px;
 		--column-count: 2;
-		row-gap: 37px;
-		column-gap: 137px;
+		row-gap: 80px;
+		column-gap: 130px;
 	}
 
 	@media #{$desktop-only} {
@@ -35,6 +42,23 @@
 		color: transparent;
 	}
 
+	&--br {
+		br {
+			display: none;
+		}
+
+		@media #{$tablet-only} {
+			br {
+				display: initial;
+			}
+		}
+	}
+
+	@media #{$mobile-only} {
+		align-items: center;
+	}
+
+
 	@media #{$not-mobile} {
 		font-size: 16px;
 		line-height: 24px;
@@ -43,12 +67,13 @@
 		gap: 31px;
 		min-height: 240px;
 
+
 		&::after {
 			position: absolute;
 			color: #f2f2f2;
 			font-size: 280px;
 			font-family: var(--accent-font);
-			right: 21px;
+			right: 10px;
 			counter-increment: section;
 			content: counter(section) " ";
 			z-index: -1;

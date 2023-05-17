@@ -7,6 +7,10 @@
 	grid-template-columns: calc(var(--curtain-place) * 100%) auto calc((1 - var(--curtain-place)) * 100%);
 	width: min(100%, 560px);
 	aspect-ratio: 280/256;
+
+	@media #{$tablet-only} {
+		margin: 0 auto;
+	}
 }
 
 

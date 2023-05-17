@@ -7,6 +7,10 @@
 	padding-top: 40px;
 	padding-bottom: 40px;
 
+	@media #{$mobile-only} {
+		padding-bottom: 0;
+	}
+
 	@media #{$not-mobile} {
 		--column-count: 3;
 		gap: 37px;

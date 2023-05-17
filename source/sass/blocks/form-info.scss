@@ -1,10 +1,10 @@
 .form-info {
 	display: flex;
 	flex-direction: column;
-	row-gap: 14px;
+	row-gap: 15px;
 
 	@media #{$not-mobile} {
-		row-gap: 20px;
+		row-gap: 22px;
 	}
 }
 

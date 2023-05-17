@@ -2,7 +2,7 @@
 	font-size: 16px;
 	display: flex;
 	flex-direction: column;
-	row-gap: 23px;
+	row-gap: 25px;
 
 	@media #{$not-mobile} {
 		font-size: 20px;
@@ -10,12 +10,12 @@
 	}
 
 	@media #{$tablet-only} {
-		row-gap: 71px;
+		row-gap: 68px;
 		margin-right: 36px;
 	}
 
 	@media #{$desktop-only} {
-		row-gap: 67px;
+		row-gap: 70px;
 	}
 }
 
@@ -29,6 +29,7 @@
 
 	@media #{$tablet-only} {
 		row-gap: 72px;
+		margin-bottom: 6px;
 	}
 
 	@media #{$desktop-only} {
@@ -42,7 +43,7 @@
 	align-items: center;
 
 	&--info {
-		gap: 13px;
+		gap: 14px;
 	}
 
 	&--contacts {
@@ -72,11 +73,11 @@
 	@media #{$desktop-only} {
 		gap: 84px;
 		margin-bottom: 82px;
+		margin-top: -10px;
 	}
 }
 
 .form__text {
-	flex-shrink: 0;
 	text-transform: uppercase;
 	font-family: var(--accent-font);
 
@@ -93,12 +94,13 @@
 	font-family: var(--accent-font);
 	outline: solid var(--border-width, 1px) var(--field-color, #e7e7e7);
 	border: none;
-	padding: 15px 14px;
-	width: 100%;
+	padding: 10px 15px 10px 20px;
+	width: 50%;
 	box-sizing: border-box;
 	color: #444444;
 	font-size: 16px;
 	text-transform: uppercase;
+	flex-grow: 1;
 
 	&::placeholder {
 		color: #444444;

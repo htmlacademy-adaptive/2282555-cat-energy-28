@@ -1,6 +1,12 @@
+.questionnaire {
+	@media #{$tablet-only} {
+		margin-left: 70px;
+	}
+}
+
 .questionnaire__title {
 	margin-top: 27px;
-	margin-bottom: 37px;
+	margin-bottom: 34px;
 
 	@media #{$tablet-only} {
 		margin-top: 65px;
@@ -17,6 +23,7 @@
 	color: #000000;
 	font-family: var(--accent-font);
 	margin-bottom: 66px;
+	text-transform: uppercase;
 
 	@media #{$not-mobile} {
 		font-size: 20px;
@@ -34,9 +41,15 @@
 	line-height: 20px;
 	width: 100%;
 
+	@media #{$mobile-only} {
+		margin-top: 8px;
+		font-size: 16px;
+		padding: 10px;
+	}
+
 	@media #{$not-mobile} {
-		line-height: 0;
 		min-height: 52px;
+		margin-top: -12px;
 	}
 
 	@media #{$tablet-only} {
@@ -49,6 +62,13 @@
 }
 
 .questionnaire__footnote {
-	line-height: 14px;
+	font-family: var(--main-font);
+	font-size: 14px;
+	line-height: 16px;
 	color: #000000;
+
+	@media #{$not-mobile} {
+		font-size: 16px;
+		margin-top: -20px;
+	}
 }
