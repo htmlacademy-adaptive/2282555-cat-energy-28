@@ -54,9 +54,8 @@
 
 	@media #{$mobile-only} {
 		flex-direction: column;
-		gap: 46px;
-		padding: 22px 0 24px;
 		text-align: center;
+		gap: 0;
 
 		&::after {
 			content: "";
@@ -69,6 +68,12 @@
 			box-shadow: 100vw 0 0 0 var(--line-color);
 			z-index: 2;
 		}
+	}
+
+	@media #{$tablet-only} {
+		margin-right: -10px;
+		margin-top: 5px;
+		gap: 16px;
 	}
 }
 
@@ -83,7 +88,6 @@
 			width: 100vw;
 			height: 1px;
 			right: 0;
-			top: -22px;
 			background-color: var(--line-color, #ebebeb);
 			box-shadow: 100vw 0 0 0 var(--line-color);
 			z-index: 2;
@@ -106,6 +110,7 @@
 	font-style: normal;
 	font-weight: 400;
 	position: relative;
+	display: block;
 
 	@media #{$mobile-only} {
 		font-size: 20px;
@@ -116,6 +121,8 @@
 
 	@media #{$desktop-only} {
 		line-height: 30px;
+		font-size: 20px;
+		padding: 8px;
 	}
 
 	&:hover {
@@ -133,9 +140,9 @@
 			position: absolute;
 			content: "";
 			height: 2px;
-			bottom: 0;
-			right: 20px;
-			left: 20px;
+			bottom: 2px;
+			right: 8px;
+			left: 8px;
 			background-color: var(--border-color);
 		}
 	}
@@ -146,7 +153,7 @@
 	height: 24px;
 	border: none;
 	position: absolute;
-	top: -47px;
+	top: -45px;
 	right: 0;
 	z-index: 2;
 	cursor: pointer;

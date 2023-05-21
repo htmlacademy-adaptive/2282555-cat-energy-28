@@ -76,7 +76,7 @@
 		box-shadow: 100vw 0 0 0 var(--line-color);
 		z-index: -1;
 
-		@media #{$tablet-only} {
+		@media #{$not-mobile} {
 			top: 22px;
 		}
 	}

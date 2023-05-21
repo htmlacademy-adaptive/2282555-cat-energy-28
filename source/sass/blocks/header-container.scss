@@ -6,4 +6,8 @@
 	@media #{$mobile-only} {
 		flex-direction: column;
 	}
+
+	@media #{$tablet-only} {
+		min-height: 52px;
+	}
 }

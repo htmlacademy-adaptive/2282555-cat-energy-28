@@ -21,7 +21,7 @@
 				rgb(104 183 56 / 0.85),
 				rgb(104 183 56 / 0.85)
 			),
-			var(--bg-image) no-repeat center / cover,
+			var(--bg-image) no-repeat var(--bg-position, center) / cover,
 			linear-gradient(
 				to right,
 				#505155,
@@ -38,6 +38,7 @@
 		}
 
 		@media #{$desktop-only} {
+			--bg-position: 0px;
 			top: 0;
 			right: 0;
 			left: 50vw;
@@ -83,7 +84,13 @@
 	}
 
 	@media #{$tablet-only} {
+		margin-top: 62px;
 		margin-bottom: 41px;
+	}
+
+	@media #{$desktop-only} {
+		margin-top: 72px;
+		margin-bottom: 40px;
 	}
 }
 
@@ -118,6 +125,10 @@
 		width: 225px;
 		padding: 17px 10px;
 	}
+
+	@media #{$desktop-only} {
+		margin-top: 53px;
+	}
 }
 
 .hero__product-wrapper {
@@ -131,6 +142,7 @@
 	}
 
 	@media #{$desktop-only} {
-		transform: translateX(-30%);
+		transform: translateX(-27%);
+		margin-top: -11px;
 	}
 }

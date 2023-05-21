@@ -15,8 +15,8 @@
 	@media #{$desktop-only} {
 		grid-template-columns: repeat(2, 1fr);
 		gap: 80px;
-		padding-top: 82px;
-		padding-bottom: 71px;
+		padding-top: 30px;
+		padding-bottom: 70px;
 	}
 }
 
@@ -50,20 +50,18 @@
 		}
 	}
 
-	@media #{$not-mobile} {
-		padding: 50px;
-	}
-
 	@media #{$tablet-only} {
 		--icon-size: 280px;
 		--icon-position: right;
-		padding-left: 53px;
-		padding-bottom: 42px;
-		padding-right: 41px;
+		padding: 50px 41px 42px 53px;
 	}
 
 	@media #{$desktop-only} {
 		--icon-size: 140px;
+
+		padding: 25px 50px 50px;
+		font-size: 16px;
+		line-height: 24px;
 	}
 
 	&::before {
@@ -86,6 +84,10 @@
 		@media #{$tablet-only} {
 			transform: translate(20px, 3px);
 		}
+
+		@media #{$desktop-only} {
+			transform: translate(-20px, 2px);
+		}
 	}
 }
 
@@ -95,6 +97,11 @@
 	@media #{$tablet-only} {
 		margin-top: 27px;
 		margin-bottom: 25px;
+	}
+
+	@media #{$desktop-only} {
+		margin-top: 50px;
+		margin-left: 163px;
 	}
 }
 
@@ -106,7 +113,8 @@
 	}
 
 	@media #{$desktop-only} {
-		margin-bottom: 23px;
+		margin-bottom: 17px;
+		margin-top: 74px;
 	}
 }
 
@@ -137,20 +145,24 @@
 
 	&::after {
 		content: "";
-		bottom: calc(50% - 13%);
-		right: -15px;
+		bottom: calc(50% - 17%);
+		right: 25px;
 		position: absolute;
 		width: 32px;
 		height: 12px;
-		mask: url("../../icons/stack.svg#arrow") no-repeat center / 100%;
+		mask: url("../../icons/stack.svg#arrow") no-repeat center / 24px;
 		background: var(--color, hsl(0 0% 0%));
 
 		@media #{$not-mobile} {
-			right: -25px;
+			right: -6px;
 		}
 	}
 
 	@media #{$tablet-only} {
 		margin-top: 14px;
+	}
+
+	@media #{$desktop-only} {
+		margin-top: 0;
 	}
 }

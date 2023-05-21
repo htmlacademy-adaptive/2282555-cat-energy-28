@@ -4,6 +4,8 @@
 	justify-content: center;
 	min-height: 205px;
 	padding: 42px;
+	font-size: 16px;
+	line-height: 20px;
 
 	@media #{$tablet-only} {
 		grid-column: span 2;
@@ -16,6 +18,7 @@
 	@media #{$desktop-only} {
 		grid-column: span 1;
 		grid-column-start: 4;
+		padding-bottom: 45px;
 	}
 
 	&::after {
@@ -49,6 +52,11 @@
 	display: flex;
 	justify-content: center;
 	align-items: flex-end;
+
+	@media #{$tablet-only} {
+		text-align: left;
+		margin-right: 85px;
+	}
 
 	&::before {
 		position: absolute;

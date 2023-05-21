@@ -10,15 +10,45 @@
 	&:active {
 		opacity: 0.6;
 	}
+
+	@media #{$tablet-only} {
+		min-height: 52px;
+		gap: 12px;
+	}
+
+	@media #{$desktop-only} {
+		gap: 13px;
+	}
 }
 
 .logo__text--header {
+	@media #{$mobile-only} {
+		margin-left: 56px;
+		margin-right: auto;
+		width: 101px;
+	}
+
+	@media #{$tablet-only} {
+		width: 101px;
+	}
+}
+
+.logo--footer {
+	justify-self: start;
+
 	@media #{$mobile-only} {
 		margin: 0 auto;
 	}
 }
 
 .logo__footer {
+	width: 143px;
+	height: 27px;
+
+	@media #{$mobile-only} {
+		width: 128px;
+	}
+
 	&:hover,
 	&:focus-visible {
 		fill: hsl(0 0% 24% / 1);

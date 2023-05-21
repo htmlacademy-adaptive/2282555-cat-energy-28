@@ -25,16 +25,33 @@
 
 
 	@media #{$mobile-only} {
-		justify-content: space-between;
+		position: relative;
+		margin-top: 11px;
+	}
+
+	@media #{$not-mobile} {
+		justify-content: end;
+		align-items: center;
 	}
 
 	&::after {
+
 		display: block;
 		content: "";
 		width: 27px;
 		height: 34px;
-		mask: url("../../icons/stack.svg#htmlacademy") no-repeat center / cover;
+		mask: url("../../icons/stack.svg#copyright-html-academy") no-repeat center / cover;
 		background: var(--color,
 		hsl(0 0% 40%));
+
+		@media #{$mobile-only} {
+			position: absolute;
+			right: 0;
+			top: -7px;
+		}
+
+		@media #{$not-mobile} {
+			margin-left: 28px;
+		}
 	}
 }
