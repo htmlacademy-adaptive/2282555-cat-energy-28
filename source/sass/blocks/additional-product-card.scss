@@ -48,12 +48,17 @@
 .additional-product-card__quantity {
 	@media #{$tablet-only} {
 		margin-left: auto;
+
+		&--position {
+			margin-right: 9px;
+		}
 	}
 }
 
 .additional-product-card__price {
 	@media #{$tablet-only} {
 		margin-left: 49px;
+		margin-right: 4px;
 	}
 
 	@media #{$desktop-only} {
