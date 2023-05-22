@@ -34,16 +34,15 @@
 
 .form-additions__title {
 	@media #{$mobile-only} {
-		margin-bottom: 34px;
+		margin-bottom: 31px;
+	}
+
+	@media #{$not-mobile} {
+		margin-bottom: 57px;
 	}
 
 	@media #{$tablet-only} {
-		margin-bottom: 59px;
 		margin-left: 0;
-	}
-
-	@media #{$desktop-only} {
-		margin-bottom: 57px;
 	}
 }
 

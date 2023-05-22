@@ -50,7 +50,7 @@
 	width: 20px;
 	height: 20px;
 	z-index: 2;
-	right: 15px;
+	right: var(--icon-position, 15px);
 	mask-image: var(--icon);
 	background-color: var(--icon-color, #222222);
 	pointer-events: none;
@@ -69,5 +69,9 @@
 
 	.form__field:focus + & {
 		background-color: #68b738;
+	}
+
+	@media #{$tablet-only} {
+		--icon-position: 20px;
 	}
 }

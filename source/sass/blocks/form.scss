@@ -15,7 +15,7 @@
 	}
 
 	@media #{$desktop-only} {
-		row-gap: 70px;
+		row-gap: 68px;
 	}
 }
 
@@ -24,11 +24,11 @@
 	grid-template-columns: 1fr;
 
 	@media #{$mobile-only} {
-		row-gap: 46px;
+		row-gap: 47px;
 	}
 
 	@media #{$tablet-only} {
-		row-gap: 72px;
+		row-gap: 74px;
 		margin-bottom: 6px;
 	}
 
@@ -71,9 +71,9 @@
 	}
 
 	@media #{$desktop-only} {
-		gap: 84px;
+		gap: 82px;
 		margin-bottom: 82px;
-		margin-top: -10px;
+		margin-top: 7px;
 	}
 }
 

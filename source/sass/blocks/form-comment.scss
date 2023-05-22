@@ -25,6 +25,7 @@
 
 	@media #{$mobile-only} {
 		min-height: 150px;
+		padding-top: 5px;
 	}
 
 	@media #{$not-mobile} {

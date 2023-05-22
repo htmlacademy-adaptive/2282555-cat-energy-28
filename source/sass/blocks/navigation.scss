@@ -75,6 +75,11 @@
 		margin-top: 5px;
 		gap: 16px;
 	}
+
+	@media #{$desktop-only} {
+		gap: 19px;
+		margin-right: -8px;
+	}
 }
 
 
@@ -140,7 +145,7 @@
 			position: absolute;
 			content: "";
 			height: 2px;
-			bottom: 2px;
+			bottom: 0;
 			right: 8px;
 			left: 8px;
 			background-color: var(--border-color);
