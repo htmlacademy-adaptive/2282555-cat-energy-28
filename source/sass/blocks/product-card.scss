@@ -24,6 +24,7 @@
 		--icon-size: 60px;
 		outline: solid 1px #f2f2f2;
 		position: static;
+		background: #ffffff;
 
 		@media #{$mobile-only} {
 			--icon-size: 30px;
@@ -131,8 +132,7 @@
 
 .product-card__title--more::before {
 	content: "";
-	margin: 0 auto;
-	margin-bottom: 47px;
+	margin: 46px auto 50px;
 	width: var(--icon-size);
 	height: var(--icon-size);
 	display: block;
@@ -140,6 +140,14 @@
 	background-repeat: no-repeat;
 	background-size: 100%;
 	background-color: transparent;
+
+	@media #{$mobile-only} {
+		margin: 5px auto 23px;
+	}
+
+	@media #{$tablet-only} {
+		margin: 47px auto 46px;
+	}
 }
 
 .product-card__characteristic-wrapper {
@@ -174,10 +182,6 @@
 	@media #{$tablet-only} {
 		padding: 0 40px;
 		margin-top: 122px;
-	}
-
-	@media #{$desktop-only} {
-		margin-top: 111px;
 	}
 }
 
