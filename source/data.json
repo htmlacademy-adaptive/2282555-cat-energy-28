@@ -1,7 +1,8 @@
 {
 	"SERVER_ROOT": "./build/",
 	"projectName": "Cat Energy",
-	"pages": [{
+	"pages": [
+		{
 			"path": "./",
 			"name": "Главная"
 		},
@@ -23,7 +24,8 @@
 		"hero-product": {
 			"ext": "png",
 			"maxdppx": 2,
-			"sizes": [{
+			"sizes": [
+				{
 					"viewport": "desktop",
 					"width": 552,
 					"height": 499
@@ -43,7 +45,8 @@
 		"hero-background": {
 			"ext": "jpg",
 			"maxdppx": 2,
-			"sizes": [{
+			"sizes": [
+				{
 					"viewport": "tablet",
 					"width": 560,
 					"height": 512
@@ -58,7 +61,8 @@
 		"slider-before": {
 			"ext": "png",
 			"maxdppx": 2,
-			"sizes": [{
+			"sizes": [
+				{
 					"viewport": "tablet",
 					"width": 560,
 					"height": 512
@@ -73,7 +77,8 @@
 		"slider-after": {
 			"ext": "png",
 			"maxdppx": 2,
-			"sizes": [{
+			"sizes": [
+				{
 					"viewport": "tablet",
 					"width": 560,
 					"height": 512
@@ -88,7 +93,8 @@
 		"products/pro-chicken500": {
 			"ext": "png",
 			"maxdppx": 2,
-			"sizes": [{
+			"sizes": [
+				{
 					"viewport": "tablet",
 					"width": 161,
 					"height": 172
@@ -103,7 +109,8 @@
 		"products/pro-chicken1000": {
 			"ext": "png",
 			"maxdppx": 2,
-			"sizes": [{
+			"sizes": [
+				{
 					"viewport": "desktop",
 					"width": 172,
 					"height": 196
@@ -123,7 +130,8 @@
 		"products/pro-fish500": {
 			"ext": "png",
 			"maxdppx": 2,
-			"sizes": [{
+			"sizes": [
+				{
 					"viewport": "tablet",
 					"width": 163,
 					"height": 174
@@ -138,7 +146,8 @@
 		"products/pro-fish1000": {
 			"ext": "png",
 			"maxdppx": 2,
-			"sizes": [{
+			"sizes": [
+				{
 					"viewport": "desktop",
 					"width": 172,
 					"height": 196
@@ -158,7 +167,8 @@
 		"products/slim-buckwheat500": {
 			"ext": "png",
 			"maxdppx": 2,
-			"sizes": [{
+			"sizes": [
+				{
 					"viewport": "tablet",
 					"width": 161,
 					"height": 172
@@ -173,7 +183,8 @@
 		"products/slim-buckwheat1000": {
 			"ext": "png",
 			"maxdppx": 2,
-			"sizes": [{
+			"sizes": [
+				{
 					"viewport": "desktop",
 					"width": 172,
 					"height": 196
@@ -193,7 +204,8 @@
 		"products/slim-rice500": {
 			"ext": "png",
 			"maxdppx": 2,
-			"sizes": [{
+			"sizes": [
+				{
 					"viewport": "tablet",
 					"width": 163,
 					"height": 174
@@ -208,7 +220,8 @@
 		"promo-background": {
 			"ext": "jpg",
 			"maxdppx": 2,
-			"sizes": [{
+			"sizes": [
+				{
 					"viewport": "desktop",
 					"width": 245,
 					"height": 289
@@ -228,7 +241,8 @@
 		"map": {
 			"ext": "png",
 			"maxdppx": 2,
-			"sizes": [{
+			"sizes": [
+				{
 					"viewport": "desktop",
 					"width": 1220,
 					"height": 400
@@ -242,26 +256,6 @@
 					"viewport": "mobile",
 					"width": 320,
 					"height": 362
-				}
-			]
-		},
-		"test": {
-			"ext": "png",
-			"maxdppx": 2,
-			"sizes": [{
-					"viewport": "desktop",
-					"width": 1280,
-					"height": 1280
-				},
-				{
-					"viewport": "tablet",
-					"width": 640,
-					"height": 640
-				},
-				{
-					"viewport": "mobile",
-					"width": 320,
-					"height": 320
 				}
 			]
 		}

@@ -3,6 +3,13 @@
 {% extends "./templates/_layout.twig" %}
 
 {% block main %}
+
+<!-- ⚠️ Проверяющему ⚠️ -->
+
+<!-- 🔷 Валидация и проверка БЭМ-классов включены в `npm run lint` 🔷 -->
+
+<!-- 🔷 Webp генерируется в прод-сборке. Проверить — `npm run preview` 🔷 -->
+
 <main class="catalog-container">
 	<section class="catalog page__leveler">
 		<h1 class="catalog__title heading heading--lvl_1">Каталог продукции</h1>
@@ -170,9 +177,9 @@
 			</li>
 			<li class="catalog__item product-card product-card--more">
 				<div class="product-card__text-wrapper">
-				<h3 class="product-card__title product-card__title--more">Показать еще 100500 товаров</h3>
-				<div class="product-card__description">На самом деле вкусов гораздо больше!</div>
-			</div>
+					<h3 class="product-card__title product-card__title--more">Показать еще 100500 товаров</h3>
+					<div class="product-card__description">На самом деле вкусов гораздо больше!</div>
+				</div>
 				<a class="product-card__button product-card__button--more button button--color_gray" href="#">показать все</a>
 			</li>
 		</ul>

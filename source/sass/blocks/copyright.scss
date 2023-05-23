@@ -1,6 +1,10 @@
 
 .copyright {
 	justify-self: stretch;
+
+	@media #{$not-mobile} {
+		justify-self: end;
+	}
 }
 
 .copyright__link {
