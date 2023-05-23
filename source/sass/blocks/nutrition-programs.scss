@@ -38,18 +38,6 @@
 		--icon: url("../../icons/stack.svg#cat_walking");
 	}
 
-	@media #{$mobile-only} {
-		&::after {
-			content: "";
-			position: absolute;
-			width: calc(100% - 20px - 20px);
-			height: 1px;
-			bottom: 58px;
-			right: 20px;
-			background-color: #d9d9d9;
-		}
-	}
-
 	@media #{$tablet-only} {
 		--icon-size: 280px;
 		--icon-position: right;
@@ -130,12 +118,27 @@
 	text-transform: uppercase;
 	text-decoration: none;
 	font-family: var(--accent-font);
-	position: relative;
 	float: left;
+	display: flex;
+	gap: 15px;
+	align-items: center;
+
+	@media #{$mobile-only} {
+		&::before {
+			content: "";
+			position: absolute;
+			width: calc(100% - 20px - 20px);
+			height: 1px;
+			right: 20px;
+			background-color: #d9d9d9;
+			bottom: 57px;
+		}
+	}
 
 	@media #{$not-mobile} {
 		font-size: 20px;
 		line-height: 30px;
+		gap: 25px;
 	}
 
 	&:active {
@@ -145,17 +148,11 @@
 
 	&::after {
 		content: "";
-		bottom: calc(50% - 17%);
-		right: 25px;
-		position: absolute;
+		display: block;
 		width: 32px;
 		height: 12px;
 		mask: url("../../icons/stack.svg#arrow") no-repeat center / 24px;
 		background: var(--color, hsl(0 0% 0%));
-
-		@media #{$not-mobile} {
-			right: -6px;
-		}
 	}
 
 	@media #{$tablet-only} {

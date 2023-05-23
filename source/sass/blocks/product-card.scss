@@ -21,15 +21,22 @@
 	}
 
 	&--more {
-		background-image: url("../../icons/stack.svg#plus");
-		background-repeat: no-repeat;
-		background-position: center -135px;
-		background-size: 60px;
+		--icon-size: 60px;
 		outline: solid 1px #f2f2f2;
 
+		::after {
+			content: "";
+			width: var(--icon-size);
+			height: var(--icon-size);
+			display: block;
+			background-image: url("../../icons/stack.svg#plus");
+			background-repeat: no-repeat;
+			background-size: 100%;
+		}
+
 		@media #{$mobile-only} {
+			--icon-size: 30px;
 			outline: none;
-			background-size: 30px;
 			background-position: center -52px;
 			font-size: 12px;
 			line-height: 16px;
