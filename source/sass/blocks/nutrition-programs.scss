@@ -141,6 +141,10 @@
 		gap: 25px;
 	}
 
+	&:hover {
+		--arrow-pose: 0;
+	}
+
 	&:active {
 		--color: hsl(0 0% 0% / 0.3);
 		color: hsl(0 0% 0% / 0.3);
@@ -151,8 +155,9 @@
 		display: block;
 		width: 32px;
 		height: 12px;
-		mask: url("../../icons/stack.svg#arrow") no-repeat center / 24px;
+		mask: url("../../icons/stack.svg#arrow") no-repeat var(--arrow-pose, -8px) / 32px;
 		background: var(--color, hsl(0 0% 0%));
+		transition: mask-position 0.1s;
 	}
 
 	@media #{$tablet-only} {
