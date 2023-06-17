@@ -42,7 +42,7 @@
 		z-index: -1;
 	}
 
-	@include bg-image("promo-background");
+	@include bg-image(promo-background);
 }
 
 .promo__description {
