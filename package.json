@@ -4,14 +4,16 @@
 	"private": true,
 	"type": "module",
 	"scripts": {
-		"editorconfig": "ec",
-		"eslint": "eslint .",
-		"stylelint": "stylelint \"source/sass/**/*.scss\"",
-		"htmllint": "gulp processMarkup lintBem --series --silent && cd build && html-validator --quiet",
-		"lint": " npm run editorconfig && npm run stylelint && npm run eslint && npm run htmllint",
-		"start": "gulp runDev",
-		"build": "gulp buildProd",
-		"preview": "gulp buildProd startServer --series"
+		"lint:whitespaces": "ec",
+		"lint:scripts": "eslint .",
+		"lint:styles": "stylelint \"source/sass/**/*.scss\"",
+		"lint:markup": "cd build && html-validator --quiet",
+		"lint:bem": "gulp lintBem --silent",
+		"lint": "pnpm --silent /^lint:/",
+		"prelint": "gulp processMarkup --silent",
+		"start": "gulp compileProject startServer --series",
+		"build": "NODE_ENV=production gulp compileProject",
+		"preview": "pnpm build && gulp startServer"
 	},
 	"devDependencies": {
 		"autoprefixer": "^10.4.14",
@@ -54,8 +56,5 @@
 	},
 	"engines": {
 		"node": "^16.20.0 || ^18.16.0"
-	},
-	"volta": {
-		"node": "18.16.0"
 	}
 }

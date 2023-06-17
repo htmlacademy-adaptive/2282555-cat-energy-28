@@ -2,6 +2,12 @@
 
 [![Project check][check-image]][check-url]
 
+---
+
+<a href="https://htmlacademy.ru"><img align="right" width="60" height="60" alt="HTML Academy" src="https://raw.githubusercontent.com/htmlacademy-adaptive/2282555-cat-energy-28/master/source/icons/htmlacademy.svg"></a>
+
+Репозиторий создан для обучения на профессиональном онлайн‑курсе «[HTML и CSS. Адаптивная вёрстка и автоматизация](https://htmlacademy.ru/intensive/adaptive)» от [HTML Academy](https://htmlacademy.ru).
+
 * Студент: [Ева Микляева](https://up.htmlacademy.ru/adaptive/28/user/2282555).
 * Наставник: [Сергей Артемов](https://htmlacademy.ru/profile/firefoxic).
 
@@ -9,7 +15,7 @@
 
 В корне проекта находятся только его конфиги. А также [Contributing.md](Contributing.md) — полезное руководство по внесению изменений.
 
-**Исходные файлы вёрстки должны лежать в `source/`.**
+Исходные файлы вёрстки должны лежать в `source/`.
 
 Собирается проект в `build/`.
 
@@ -41,61 +47,43 @@ curl https://get.volta.sh | bash
 volta install node
 ```
 
-После этого в терминале в директории проекта запусти:
-
-```shell
-node -v
-```
-
-Это проверка версии _node.js_, но так как в проекте для _volta_ указана необходимая версия 16.20.0, _volta_ сначала запустит установку этой версии (если ещё не установлена) и только после этого выдаст её номер.
-
-После этого любые npm-команды будут выполняться в требуемой проекту версии (16.20.0), а вне этого проекта будет запускаться свежая версия (18.16.0).
-
 ### 3. Зависимости
 
-Вместе с нодой стал доступен её менеджер пакетов — _npm_. Можно было бы использовать его, но лучше воспользоваться его альтернативой — _pnpm_. Установи его через _volta_:
+Вместе с нодой стал доступен её менеджер пакетов — _npm_. Но в проекте используется его альтернатива — _pnpm_. Установи его через _volta_:[^1]
 
 ```shell
 volta install pnpm
 ```
 
-> В Windows эта команда может завершиться с ошибкой (_pnpm_ не установится). В таком случае в настройках системы нужно включить режим «Для разработчика» (официальная [инструкция](https://learn.microsoft.com/ru-ru/windows/apps/get-started/enable-your-device-for-development#accessing-settings-for-developers)), перезагрузиться и заново запустить команду.
+[^1]: В Windows эта команда может завершиться с ошибкой (_pnpm_ не установится). В таком случае в настройках системы нужно включить режим «Для разработчика» (официальная [инструкция](https://learn.microsoft.com/ru-ru/windows/apps/get-started/enable-your-device-for-development#accessing-settings-for-developers)), перезагрузиться и заново запустить команду.
 
-После этого для установки зависимостей проекта в терминале, находясь в директории проекта, выполни:
+После этого для установки зависимостей проекта в терминале, находясь в директории проекта, выполни:[^2]
 
 ```shell
 pnpm i
 ```
 
-> **Не** обращай внимание на предупреждения во время установки.
+[^2]: **Не** обращай внимание на предупреждения во время установки.
 
-После установки зависимостей становится доступным любой npm-скрипт проекта. Все доступные скрипты можно посмотреть выполнив:
+После установки зависимостей становится доступным любой pnpm-скрипт проекта. Все доступные скрипты можно посмотреть выполнив:
 
 ```shell
-npm run
+pnpm run
 ```
 
 Но чаще остальных используются два:
 
-1. Линтинг — последовательная проверка кода четырьмя линтерами:
+1. Линтинг — последовательная проверка кода пятью линтерами:
 
 	```shell
-	npm run lint
+	pnpm lint
 	```
 
 2. Cборка для разработки, при которой запустится и локальный сервер в папке `build/`, в которую собирается проект из папки `source/`, а в брауезере откроется разрабатываемый сайт и будет обновляться при обновлении файлов в проекте:
 
 	```shell
-	npm run start
+	pnpm start
 	```
-
-> Кстати, в этих командах тоже можно использовать _pnpm_ вместо _npm_, но не обязательно. Необхоим _pnpm_ только при установке зависимостей.
-
----
-
-<a href="https://htmlacademy.ru/intensive/adaptive"><img align="left" width="60" height="60" alt="HTML Academy" src="https://raw.githubusercontent.com/htmlacademy-adaptive/2282555-cat-energy-28/master/source/icons/htmlacademy.svg"></a>
-
-Репозиторий создан для обучения на профессиональном онлайн‑курсе «[HTML и CSS. Адаптивная вёрстка и автоматизация](https://htmlacademy.ru/intensive/adaptive)» от [HTML Academy](https://htmlacademy.ru).
 
 [check-image]: https://github.com/htmlacademy-adaptive/2282555-cat-energy-28/workflows/Project%20check/badge.svg?branch=master
 [check-url]: https://github.com/htmlacademy-adaptive/2282555-cat-energy-28/actions

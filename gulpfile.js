@@ -26,7 +26,7 @@ const sass = gulpSass(dartSass)
 const SOURCE_ROOT = `./source/`
 const DATA_PATH = `${SOURCE_ROOT}data.json`
 const { SERVER_ROOT } = readJsonFile(DATA_PATH)
-let isDevelopment = true
+let isDevelopment = process.env.NODE_ENV !== `production`
 
 function readJsonFile (path) {
 	const file = readFileSync(path)
@@ -175,27 +175,15 @@ export function startServer () {
 }
 
 export function compileProject (done) {
-	parallel(
-		processStyles,
-		processMarkup,
-		processScripts,
-		createStack,
-		copyAssets,
-		optimizeImages
-	)(done)
-}
-
-export function buildProd (done) {
-	isDevelopment = false
 	series(
 		removeBuild,
-		compileProject
-	)(done)
-}
-
-export function runDev (done) {
-	series(
-		compileProject,
-		startServer
+		parallel(
+			processStyles,
+			processMarkup,
+			processScripts,
+			createStack,
+			copyAssets,
+			optimizeImages
+		)
 	)(done)
 }

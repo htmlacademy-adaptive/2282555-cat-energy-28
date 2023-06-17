@@ -38,7 +38,7 @@ jobs:
         run: pnpm i
 
       - name: Build project
-        run: npm run build
+        run: pnpm build
 
       - name: Get project data
         run: echo "DATA_JSON=$(jq -c . < source/data.json)" >> $GITHUB_ENV
