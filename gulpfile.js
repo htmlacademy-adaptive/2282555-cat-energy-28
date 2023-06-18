@@ -8,7 +8,6 @@ import server from "browser-sync"
 import plumber from "gulp-plumber"
 import twig from "gulp-twig"
 import htmlmin from "gulp-htmlmin"
-import bemlinter from "gulp-html-bemlinter"
 import * as dartSass from "sass"
 import gulpSass from "gulp-sass"
 import svgo from "gulp-svgmin"
@@ -41,11 +40,6 @@ export function processMarkup () {
 		.pipe(htmlmin({ collapseWhitespace: !isDevelopment }))
 		.pipe(dest(SERVER_ROOT))
 		.pipe(server.stream())
-}
-
-export function lintBem () {
-	return src(`./build/*.html`)
-		.pipe(bemlinter())
 }
 
 export function processStyles () {
