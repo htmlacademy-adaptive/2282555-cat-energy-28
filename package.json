@@ -6,9 +6,9 @@
 	"scripts": {
 		"lint:whitespaces": "ec",
 		"lint:scripts": "eslint .",
-		"lint:styles": "stylelint \"source/sass/**/*.scss\"",
+		"lint:styles": "stylelint source/sass/**/*.scss",
 		"lint:markup": "html-validator build/**/*.html --quiet",
-		"lint:bem": "bemlint 'build/**/*.html' --mod='--' --errors",
+		"lint:bem": "bemlint build/**/*.html --mod='--' --errors",
 		"lint": "pnpm --silent /^lint:/",
 		"prelint": "gulp processMarkup --silent",
 		"start": "gulp compileProject startServer --series",
